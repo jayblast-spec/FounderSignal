@@ -231,6 +231,36 @@
     target.scrollTop = target.scrollHeight;
   }
 
+  function renderHealthMatrix(results) {
+    const target = primaryTerminal();
+    if (!target) return;
+    document.querySelector("[data-health-matrix]")?.remove();
+    const passed = results.filter((item) => item.ok).length;
+    const matrix = document.createElement("section");
+    matrix.className = "health-matrix";
+    matrix.dataset.healthMatrix = "true";
+    matrix.innerHTML = `
+      <div class="health-head">
+        <div>
+          <span>Live function probe</span>
+          <strong>${passed}/${results.length} endpoints passed</strong>
+        </div>
+        <i>${new Date().toLocaleTimeString()}</i>
+      </div>
+      <div class="health-grid">
+        ${results.map((item) => `
+          <div class="health-card" data-status="${item.ok ? "pass" : "check"}">
+            <b>${escapeHtml(item.name)}</b>
+            <small>${escapeHtml(item.url)}</small>
+            <span>${item.ok ? "PASS" : "CHECK"} / ${item.ms}ms</span>
+          </div>
+        `).join("")}
+      </div>
+    `;
+    target.appendChild(matrix);
+    target.scrollTop = target.scrollHeight;
+  }
+
   function collectFormState() {
     const values = [...document.querySelectorAll("textarea,input,select")].map((field) => field.value.trim()).filter(Boolean);
     return {
@@ -395,7 +425,6 @@
   }
 
   async function runChecks() {
-    terminal("RUNNING LIVE FUNCTION CHECKS...");
     const sample = state();
     const checks = [
       ["agent", "/api/agent-confrontation", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(sample) }],
@@ -406,15 +435,16 @@
     ];
     const results = [];
     for (const [name, url, options] of checks) {
+      const started = performance.now();
       try {
         const response = await fetch(url, options);
-        results.push(`${name}:${response.ok ? "PASS" : "CHECK"}`);
+        results.push({ name, url, ok: response.ok, ms: Math.round(performance.now() - started) });
       } catch {
-        results.push(`${name}:CHECK`);
+        results.push({ name, url, ok: false, ms: Math.round(performance.now() - started) });
       }
     }
-    terminal(results.join(" // "));
-    toast(`Live checks complete: ${results.join(" ")}`);
+    renderHealthMatrix(results);
+    toast(`Live checks complete: ${results.filter((item) => item.ok).length}/${results.length} endpoints passed`);
   }
 
   async function hydrateSystemMetrics() {

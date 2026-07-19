@@ -593,6 +593,80 @@ input:focus, textarea:focus, select:focus { border-color: var(--accent); box-sha
   padding: 10px 13px;
   font: 900 12px Inter, ui-sans-serif, system-ui, sans-serif;
 }
+.health-matrix {
+  margin-top: 16px;
+  border: 1px solid rgba(103,232,249,.24);
+  border-radius: 14px;
+  background:
+    radial-gradient(520px 220px at 100% 0%, rgba(103,232,249,.11), transparent 72%),
+    rgba(9,9,11,.96);
+  overflow: hidden;
+}
+.health-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  padding: 15px;
+}
+.health-head span {
+  display: block;
+  color: #67e8f9;
+  font: 900 10px ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.health-head strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--text);
+  font: 900 18px Inter, ui-sans-serif, system-ui, sans-serif;
+}
+.health-head i {
+  color: var(--muted);
+  font-style: normal;
+  font: 800 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+.health-card {
+  display: grid;
+  gap: 7px;
+  min-height: 118px;
+  background: rgba(5,5,6,.96);
+  padding: 13px;
+}
+.health-card b {
+  color: var(--text);
+  font: 900 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.health-card small {
+  color: var(--muted);
+  font: 11px/1.35 ui-monospace, SFMono-Regular, Consolas, monospace;
+  word-break: break-all;
+}
+.health-card span {
+  align-self: end;
+  width: max-content;
+  border: 1px solid rgba(16,185,129,.35);
+  border-radius: 999px;
+  background: rgba(16,185,129,.08);
+  color: var(--accent-2);
+  padding: 5px 8px;
+  font: 900 9px ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.health-card[data-status="check"] span {
+  border-color: rgba(251,191,36,.35);
+  background: rgba(251,191,36,.08);
+  color: #fbbf24;
+}
 .status-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
 .status-card { border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.025); padding: 18px; }
 .status-card b { display: block; color: var(--accent-2); margin-bottom: 8px; }
