@@ -11,6 +11,8 @@ Founder Intent
   -> Codex Artifact Compiler
   -> Practitioner Correction Loop
   -> Regression Check
+  -> Workspace Packet
+  -> GitHub Loop
   -> Vault Handoff
 ```
 
@@ -22,6 +24,7 @@ FounderSignal treats a startup idea as a source object. The system compiles that
 - `schema.sql`: Supabase PostgreSQL tables, relationships, indexes, and RLS policies
 - `tasks.txt`: atomic implementation tasks for a Codex `/goal` loop
 - `manifest.json`: reusable skill-style workflow contract
+- Workspace Packet: copy-ready `/goal`, acceptance criteria, target files, guardrails, corrections, and implementation prompt for Codex, GPT, or a builder workspace
 
 ## Scenario Domains
 
@@ -41,9 +44,11 @@ Codex compiles a recursive sales agent loop: prospect research, tone analysis, p
 
 - Frontend: static Vercel deployment with platform shell and workflow pages
 - Backend: Vercel Serverless Functions
+- Product proof: 90-second demo route and status contract route
 - Agent package: Vercel eve-style `eve-agent/` directory
 - Automation: Vercel Cron at `/api/cron/founder-signal-check`
 - GitHub control plane: issue template, PR template, and agent eval workflow
+- Workspace relay: `/api/workspace-packet` generates a portable implementation packet
 - Data Contract: Supabase-ready PostgreSQL artifacts with explicit RLS
 - Continuity: ArkNet Digital Vault public reference only
 - Repository Safety: standalone Build Week project; does not write into ArkNet OS or ArkNet Digital
@@ -71,4 +76,4 @@ FounderSignal uses this structure to show how the platform can become a durable 
 | Output | Code snippets | Complete execution packets |
 | State | IDE-local | API-first workflow contract |
 | Correction | Manual rewrite | Regression-aware artifact recompilation |
-| Handoff | Developer copy/paste | Codex brief plus Vault commit |
+| Handoff | Developer copy/paste | Codex brief, Workspace Packet, GitHub loop, and Vault commit |

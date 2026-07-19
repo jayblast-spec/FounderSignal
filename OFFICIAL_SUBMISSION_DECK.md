@@ -18,6 +18,7 @@ FounderSignal compiles startup intent into a deterministic execution packet:
 - `schema.sql`
 - `tasks.txt`
 - `manifest.json`
+- Workspace Packet
 - GitHub loop packet
 - Vault handoff commit
 
@@ -28,7 +29,8 @@ FounderSignal compiles startup intent into a deterministic execution packet:
 3. Compile artifacts.
 4. Inject practitioner correction.
 5. Recompile with regression check.
-6. Commit corrected artifact state to Vault handoff.
+6. Generate the Workspace Packet.
+7. Commit corrected artifact state to Vault handoff.
 
 ## Slide 5 - Self-Improving Loop
 
@@ -57,8 +59,8 @@ FounderSignal generates machine-parsable files Codex can use directly:
 
 ## Slide 7 - Build Week Fit
 
-- **Technical Implementation:** multi-step endpoints, compiler guardrails, diff engine, Vault commit hash.
-- **Design:** one-click mission packets, tabbed ArtifactViewer, visible correction console, GitHub packet surface, and Vault handoff flow.
+- **Technical Implementation:** multi-step endpoints, compiler guardrails, diff engine, Workspace Packet relay, Vault commit hash.
+- **Design:** 90-second judge path, one-click mission packets, tabbed ArtifactViewer, visible correction console, GitHub packet surface, and Vault handoff flow.
 - **Impact:** compresses strategy-to-repository planning from hours to minutes.
 
 ## Slide 8 - Judge Walkthrough
@@ -69,7 +71,7 @@ https://foundersignal-buildweek.vercel.app/
 
 Path:
 
-Agent Mission -> Run Workflow -> Codex Brief -> Compile Live -> Founder Correction -> Manifest/Schema -> Launch Assets -> Vault Handoff
+90 Sec Demo -> Agent Mission -> Run Workflow -> Codex Brief -> Compile Live -> Founder Correction -> Workspace Packet -> Launch Assets -> Live Checks -> Vault Handoff
 
 ## Slide 9 - Builder Proof
 
@@ -80,3 +82,18 @@ https://foundersignal-buildweek.vercel.app/builder.html
 Purpose:
 
 Show the reviewer the full proof surface in one place: live product route, GitHub repo, Codex artifact compiler, API docs, eve-style agent directory, GitHub packet, Vault handoff, and verified deployment contract.
+
+## Slide 10 - Live Verification Contract
+
+Open:
+
+https://foundersignal-buildweek.vercel.app/api/system-status
+
+Current contract:
+
+- 24 public routes
+- 9 serverless API routes
+- 4 artifact types
+- 1 Vercel cron endpoint
+
+The counts are deployment contract checks, not fake usage or uptime claims.

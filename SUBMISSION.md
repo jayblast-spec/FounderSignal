@@ -18,6 +18,12 @@ https://foundersignal-buildweek.vercel.app/builder.html
 
 Use this route when a reviewer wants the shortest path to inspect the full public proof set: live workflow, Codex compiler, API reference, GitHub packet, eve agent directory, Vault handoff, repository link, and submission materials.
 
+## 90 Second Demo
+
+https://foundersignal-buildweek.vercel.app/demo.html
+
+Use this route when a reviewer wants a guided walkthrough instead of exploring the full product map. It sends the reviewer through Agent Console, Codex Brief, Correction Loop, Workspace Packet, Live Checks, and Vault Handoff in one clean sequence.
+
 ## Project Narrative
 
 FounderSignal proves that the gap between founder strategy and repository bootstrapping can be compressed dramatically. The platform runs a multi-step validation pipeline, processes practitioner corrections through a `previous_response_id` continuity contract, and outputs structured technical blueprints ready for Codex or an automated IDE workspace.
@@ -33,6 +39,7 @@ Note: public metrics are limited to verifiable Build Week proof points. FounderS
 - Converts founder corrections into regression checks.
 - Mutates `spec.md`, `schema.sql`, `tasks.txt`, and `manifest.json` in place.
 - Generates a Codex Skill manifest named `FounderSignal_Bootstrap`.
+- Generates a Workspace Packet for Codex, GPT, or vibe-coder handoff with `/goal`, acceptance criteria, target files, and guardrails.
 - Produces Supabase-native SQL with explicit RLS policies.
 - Creates GitHub loop packets and scheduled review endpoints.
 - Commits the corrected artifact state through a Vault handoff endpoint with session hash.
@@ -41,6 +48,7 @@ Note: public metrics are limited to verifiable Build Week proof points. FounderS
 
 - **Recursive `/goal` Pattern:** Orchestrates staged agent work to maintain state across architectural decisions.
 - **Direct-to-IDE Artifacts:** Generates machine-parsable `spec.md`, `schema.sql`, `tasks.txt`, and `manifest.json` for immediate repository bootstrapping.
+- **Workspace Packet Relay:** Converts validated intent into a copy-ready implementation packet that a repo-level agent or human builder can execute without reinterpreting the strategy.
 - **Self-Improving Evals:** Traces practitioner input into regression checks, then recompiles artifacts in place.
 - **Data Continuity:** Packages final state for ArkNet Digital Vault handoff with a content hash and session id.
 
@@ -53,8 +61,8 @@ Note: public metrics are limited to verifiable Build Week proof points. FounderS
 [6. Commit to Vault] <- [5. View Manifest/Schema] <- [4. Apply Correction]
 ```
 
-1. Open https://foundersignal-buildweek.vercel.app/
-2. Click **Open Agent Console**.
+1. Open https://foundersignal-buildweek.vercel.app/demo.html
+2. Click **Start at Agent Console**.
 3. Select **Agent Mission** or another mission packet.
 4. Click **Run Workflow** and inspect the VC, security, and growth cards.
 5. Open **Codex Brief**.
@@ -62,10 +70,12 @@ Note: public metrics are limited to verifiable Build Week proof points. FounderS
 7. In **Founder correction**, enter: `Must support completely localized data isolation rules.`
 8. Click **Apply Correction**.
 9. Verify **System updated: regression check passed** and inspect **SCHEMA.SQL** plus **MANIFEST.JSON**.
-10. Open **Launch Assets** and click **Generate GitHub Packet**.
-11. Open **Vault Handoff**.
-12. Click **Commit Assets** and verify the `SESSION_...` commit id.
-13. Open **Builder Proof** to inspect the full evidence map and repository link.
+10. Open **Workspace Packet** and click **Generate Workspace Packet**.
+11. Open **Launch Assets** and click **Generate GitHub Packet**.
+12. Open **Live Checks** and click **Run Checks**.
+13. Open **Vault Handoff**.
+14. Click **Commit Assets** and verify the `SESSION_...` commit id.
+15. Open **Builder Proof** to inspect the full evidence map and repository link.
 
 ## Technical Implementation
 
@@ -75,8 +85,11 @@ Note: public metrics are limited to verifiable Build Week proof points. FounderS
   - `POST /api/compile-brief`
   - `POST /api/refine-artifacts`
   - `POST /api/goal-execution`
+  - `POST /api/workspace-packet`
   - `POST /api/github-loop`
+  - `GET /api/eve-manifest`
   - `GET /api/cron/founder-signal-check`
+  - `GET /api/system-status`
   - `POST /api/vault-commit`
 - Supabase-ready generated schema with explicit `enable row level security` and `create policy` statements.
 - Artifact compiler guardrails that reject non-compliant model output and fall back to safe SQL/task generation.
