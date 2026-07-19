@@ -2,6 +2,7 @@
 node_modules
 *.log
 *.png
+!favicon.png
 !docs/readme/*.png
 stitch-*.html
 workflow-smoke.spec.js

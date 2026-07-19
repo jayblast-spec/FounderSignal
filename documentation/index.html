@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Documentation | FounderSignal</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/docs/readme/foundersignal-icon.png">
   <link rel="stylesheet" href="/platform.css">
 </head>
 <body>
@@ -17,6 +19,9 @@
     <article class="doc">
       <p class="eyebrow">Documentation</p>
       <h1>FounderSignal Quickstart</h1>
+      <div class="doc-hero-image">
+        <img src="/docs/readme/foundersignal-hero-blueprint.png" alt="FounderSignal blueprint compiler preview">
+      </div>
       <p>FounderSignal converts founder intent into a repeatable execution packet. Start by sending the idea, target customer, validation score, known risks, and any founder corrections to the compiler endpoint. The compiler returns four artifacts: <strong>spec.md</strong> for product requirements, <strong>schema.sql</strong> for Supabase PostgreSQL with RLS, <strong>tasks.txt</strong> for a Codex goal loop, and <strong>manifest.json</strong> for reusable workflow packaging.</p>
       <p>The recommended flow is simple. First, run the Agent Loop to capture the founder hypothesis and pressure-test it through market, technical, and growth lenses. Next, open the Codex Brief and compile the artifact set. If the founder disagrees with any assumption, apply a correction. FounderSignal treats that correction as a regression check, not a note. The output is recompiled so the new constraint appears across the spec, schema, task list, and manifest.</p>
       <p>After artifacts are ready, use the Vault Handoff route to create a session commit. The public Build Week version uses deterministic fallbacks where private model keys are unavailable, but the contract is production-oriented: API routes are typed by behavior, Supabase policies are explicit, and artifacts are machine-readable enough for Codex or another AI IDE to continue the work.</p>

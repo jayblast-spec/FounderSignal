@@ -13,6 +13,10 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 </p>
 
 <p>
+  <img alt="FounderSignal Icon" src="docs/readme/foundersignal-icon.png" width="96">
+</p>
+
+<p>
   <img alt="OpenAI Codex" src="https://img.shields.io/badge/OpenAI%20Codex-Command%20Layer-111827?style=flat-square&logo=openai&logoColor=white">
   <img alt="Vercel" src="https://img.shields.io/badge/Vercel-Functions%20%2B%20Cron-000000?style=flat-square&logo=vercel&logoColor=white">
   <img alt="Supabase" src="https://img.shields.io/badge/Supabase-RLS%20Schemas-3ECF8E?style=flat-square&logo=supabase&logoColor=white">
@@ -57,6 +61,15 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 <p align="center">
   <img alt="Flow animation" src="https://capsule-render.vercel.app/api?type=rect&height=70&color=0:09090B,45:101113,100:10B981&text=Agentic%20Workflow%20%7C%20Codex%20Compiler%20%7C%20Vault%20Handoff&fontColor=FAFAFA&fontSize=18&fontAlign=50&animation=fadeIn">
 </p>
+
+## Brand Heroes
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/readme/foundersignal-hero-flow.png" alt="FounderSignal workflow hero"></td>
+    <td width="50%"><img src="docs/readme/foundersignal-hero-blueprint.png" alt="FounderSignal blueprint hero"></td>
+  </tr>
+</table>
 
 ## Live Links
 

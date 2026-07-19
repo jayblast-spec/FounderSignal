@@ -49,9 +49,10 @@ button { font: inherit; cursor: pointer; }
   place-items: center;
   border: 1px solid rgba(16,185,129,.46);
   border-radius: 5px;
-  color: var(--accent-2);
-  background: rgba(16,185,129,.09);
-  font-size: 9px;
+  color: transparent;
+  background: rgba(16,185,129,.09) url("/docs/readme/foundersignal-icon.png") center / cover no-repeat;
+  font-size: 0;
+  box-shadow: 0 0 18px rgba(16,185,129,.18);
 }
 .nav { gap: 30px; color: var(--muted); font-size: 14px; }
 .nav a:hover { color: var(--text); }
@@ -532,6 +533,58 @@ footer {
 .page-hero { padding: 64px 0 34px; border-bottom: 1px solid var(--line); }
 .page-hero h1 { max-width: 960px; }
 .page-hero .lead { max-width: 760px; }
+.subpage-hero-art, .doc-hero-image {
+  position: relative;
+  border: 1px solid rgba(16,185,129,.24);
+  border-radius: 18px;
+  background: rgba(5,5,6,.92);
+  overflow: hidden;
+  box-shadow: 0 28px 90px rgba(0,0,0,.3), 0 0 70px rgba(16,185,129,.06);
+}
+.subpage-hero-art {
+  margin: 28px 0 10px;
+}
+.subpage-hero-art img, .doc-hero-image img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.subpage-hero-art img {
+  aspect-ratio: 16 / 7.7;
+}
+.doc-hero-image {
+  margin: 24px 0 28px;
+}
+.doc-hero-image img {
+  aspect-ratio: 16 / 7.8;
+}
+.subpage-hero-art div {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border: 1px solid rgba(103,232,249,.2);
+  border-radius: 14px;
+  background: rgba(9,9,11,.74);
+  backdrop-filter: blur(14px);
+  padding: 14px 16px;
+}
+.subpage-hero-art span {
+  color: var(--accent-2);
+  font: 900 10px ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.subpage-hero-art b {
+  color: var(--soft);
+  font-size: 14px;
+  text-align: right;
+}
 .surface {
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -1204,5 +1257,8 @@ input:focus, textarea:focus, select:focus { border-color: var(--accent); box-sha
   .mission-strip { grid-template-columns: 1fr; }
   .preview-stage { min-height: auto; }
   .preview-card, .preview-card:nth-child(2), .preview-card:hover { transform: none; }
+  .subpage-hero-art div { position: static; border-radius: 0; border-left: 0; border-right: 0; border-bottom: 0; }
+  .subpage-hero-art div { display: grid; }
+  .subpage-hero-art b { text-align: left; }
   h1 { font-size: 48px; }
 }
