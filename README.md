@@ -1,63 +1,160 @@
+<div align="center">
+
 # FounderSignal
 
-FounderSignal is a standalone OpenAI Build Week 2026 project by ArkNet Digital.
+### Autonomous Idea-to-Execution Compiler
 
-**Pitch:** FounderSignal is an autonomous idea-to-execution compiler. It turns raw founder intent into Codex-ready system blueprints: `spec.md`, `schema.sql`, `tasks.txt`, `manifest.json`, GitHub issue packets, eve agent files, and a Vault handoff package.
+FounderSignal turns raw founder intent into Codex-ready execution packets: agent confrontation, corrected specs, Supabase RLS schemas, task lists, reusable manifests, GitHub packets, eve agent files, and Vault handoff packages.
 
-Live demo: https://foundersignal-buildweek.vercel.app/
+<p>
+  <a href="https://foundersignal-buildweek.vercel.app/"><img alt="Live Demo" src="https://img.shields.io/badge/Live-Demo-10B981?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://github.com/jayblast-spec/FounderSignal"><img alt="GitHub Repo" src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white"></a>
+  <a href="https://foundersignal-buildweek.vercel.app/api/system-status"><img alt="System Status" src="https://img.shields.io/badge/System-Verified-67E8F9?style=for-the-badge&logo=checkmarx&logoColor=black"></a>
+</p>
 
-FounderSignal is not a chat interface. It is a workflow utility for founders and software teams who need to move from vague business instinct to executable architecture without losing constraints, security rules, or implementation context.
+<p>
+  <img alt="OpenAI Codex" src="https://img.shields.io/badge/OpenAI%20Codex-Command%20Layer-111827?style=flat-square&logo=openai&logoColor=white">
+  <img alt="Vercel" src="https://img.shields.io/badge/Vercel-Functions%20%2B%20Cron-000000?style=flat-square&logo=vercel&logoColor=white">
+  <img alt="Supabase" src="https://img.shields.io/badge/Supabase-RLS%20Schemas-3ECF8E?style=flat-square&logo=supabase&logoColor=white">
+  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-Issue%20Packets-181717?style=flat-square&logo=github&logoColor=white">
+  <img alt="Groq" src="https://img.shields.io/badge/Groq-Agent%20Confrontation-F55036?style=flat-square">
+  <img alt="NVIDIA" src="https://img.shields.io/badge/NVIDIA-Edge%20Surface-76B900?style=flat-square&logo=nvidia&logoColor=white">
+  <img alt="Gemini" src="https://img.shields.io/badge/Gemini-Research%20Surface-8E75B2?style=flat-square&logo=googlegemini&logoColor=white">
+</p>
 
-## Judge Path
+</div>
 
-Use this sequence to verify the complete Build Week loop:
+## Live Links
 
-1. Open https://foundersignal-buildweek.vercel.app/
-2. Select a one-click demo: `SaaS`, `Local Biz`, or `Agent Workflow`.
-3. Open `Codex Brief`.
-4. Click `Compile Live`.
-5. Add a correction such as `Must support completely localized data isolation rules.`
-6. Click `Apply Correction + Recompile`.
-7. Verify the `System Updated: Regression check passed` state.
-8. Inspect `SPEC.MD`, `SCHEMA.SQL`, `TASKS.TXT`, and `MANIFEST.JSON`.
-9. Copy the Codex brief or manifest.
-10. Open `Vault Handoff` and run the ArkNet Digital Vault handoff flow.
+| Surface | URL | Purpose |
+|---|---|---|
+| Live product | https://foundersignal-buildweek.vercel.app/ | Public Build Week experience |
+| Agent Console | https://foundersignal-buildweek.vercel.app/report.html | Run VC, security, and growth confrontation |
+| Codex Brief | https://foundersignal-buildweek.vercel.app/brief.html | Compile `spec.md`, `schema.sql`, `tasks.txt`, `manifest.json` |
+| Repository Skill | https://foundersignal-buildweek.vercel.app/documentation/repository/ | Use FounderSignal as a Codex workflow |
+| eve Agent | https://foundersignal-buildweek.vercel.app/eve/ | Durable agent directory proof |
+| Vault Handoff | https://foundersignal-buildweek.vercel.app/vault-handoff.html | Package corrected session for continuity |
+| System Status | https://foundersignal-buildweek.vercel.app/api/system-status | Verified route/artifact/cron contract |
 
-Expected outcome: the same founder intent becomes a corrected, machine-parsable implementation packet instead of a loose AI answer.
+## What FounderSignal Does
 
-## Why It Fits Build Week
+FounderSignal is not a chat wrapper. It is an execution compiler for founder workflows.
 
-FounderSignal is built around the 2026 shift from AI answers to finished professional work:
+```text
+Founder intent
+  -> Specialist confrontation
+  -> Codex-ready brief
+  -> Correction loop
+  -> Supabase RLS schema
+  -> GitHub issue packet
+  -> eve-compatible skill files
+  -> Vault handoff package
+```
 
-- **Codex-first output:** Generates implementation artifacts a repo-level agent can execute.
-- **Self-improving correction loop:** Converts practitioner feedback into regression checks before recompiling artifacts.
-- **Reusable skill packaging:** Emits a `FounderSignal_Bootstrap` manifest and provides reusable skill files under `eve-agent/skills`.
-- **Production boundary:** Produces Supabase PostgreSQL schema and explicit RLS policies instead of generic database advice.
-- **Continuity:** Packages final corrected state for the public ArkNet Digital Vault continuity layer.
+Expected result: a vague startup idea becomes a machine-parsable implementation packet a developer or Codex agent can act on.
 
-Public metrics are intentionally limited to verifiable proof points. FounderSignal does not claim production volume, latency SLA, or uptime history that has not been measured.
+## Command Layer
+
+FounderSignal positions Codex as the orchestration layer and treats other engines as supporting surfaces.
+
+| Layer | Logo | Role |
+|---|---:|---|
+| OpenAI Codex | <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=64" width="28" alt="OpenAI logo"> | System orchestration, repo-ready artifacts, correction memory, task boundaries, implementation handoff |
+| Groq | <img src="https://www.google.com/s2/favicons?domain=groq.com&sz=64" width="28" alt="Groq logo"> | Fast specialist confrontation and public demo inference |
+| Gemini | <img src="https://cdn.simpleicons.org/googlegemini/8E75B2" width="28" alt="Gemini logo"> | Optional research or multimodal reasoning surface |
+| NVIDIA | <img src="https://cdn.simpleicons.org/nvidia/76B900" width="28" alt="NVIDIA logo"> | Optional local or edge acceleration layer |
+| Vercel | <img src="https://cdn.simpleicons.org/vercel/000000" width="28" alt="Vercel logo"> | Functions, cron, deployment, and eve-style agent runtime shape |
+| Supabase | <img src="https://cdn.simpleicons.org/supabase/3ECF8E" width="28" alt="Supabase logo"> | PostgreSQL schema, explicit RLS, and future persistence |
+| GitHub | <img src="https://cdn.simpleicons.org/github/181717" width="28" alt="GitHub logo"> | Issue templates, PR template, eval workflow, and implementation queue |
+
+No unsupported benchmark claims are made. The point is architecture: other engines can assist; Codex receives the corrected implementation packet.
+
+## Build Week Workflow
+
+| Step | Icon | Route | Output |
+|---:|---|---|---|
+| 01 | `AI` | `/report.html` | VC, security, and growth agents pressure-test the idea |
+| 02 | <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=64" width="24" alt="OpenAI logo"> | `/brief.html` | Codex brief with spec/schema/tasks/manifest |
+| 03 | `RC` | `/brief.html` | Founder correction becomes a regression check |
+| 04 | <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=64" width="24" alt="OpenAI logo"> | `/documentation/repository/` | Reusable Codex Skill instructions |
+| 05 | <img src="https://cdn.simpleicons.org/vercel/000000" width="24" alt="Vercel logo"> | `/eve/` | eve-style agent directory proof |
+| 06 | `VA` | `/vault-handoff.html` | Corrected artifact state packaged for Vault continuity |
+
+## Core Capabilities
+
+| Capability | Icon | What It Proves |
+|---|---|---|
+| Validation Engine | `VE` | Agentic regression framework that verifies artifacts against founder intent |
+| Codex Compiler | <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=64" width="24" alt="OpenAI logo"> | Blueprint compilation into markdown, SQL, task lists, and manifests |
+| Recursive Repair | `RR` | Corrections mutate the artifact set instead of generating loose new answers |
+| GitHub Loop | <img src="https://cdn.simpleicons.org/github/181717" width="24" alt="GitHub logo"> | Implementation issue packets for a real engineering queue |
+| Supabase-safe | <img src="https://cdn.simpleicons.org/supabase/3ECF8E" width="24" alt="Supabase logo"> | PostgreSQL schema with explicit RLS policies |
+| Vercel eve Agent | <img src="https://cdn.simpleicons.org/vercel/000000" width="24" alt="Vercel logo"> | Agent directory with tools, skills, schedules, channels, and subagents |
 
 ## What It Generates
 
-- `spec.md` - functional requirements, constraints, and user workflows.
-- `schema.sql` - Supabase PostgreSQL tables, relations, indexes, and RLS policies.
-- `tasks.txt` - atomic Codex `/goal` checklist tasks.
-- `manifest.json` - reusable Codex Skill manifest.
-- `AGENTS.md` block - repo-ready agent operating instructions.
-- GitHub issue packet - implementation-ready issue title, labels, and checklist.
-- Vault package - signed markdown handoff for ArkNet Digital Vault reference.
+| Artifact | Format | Purpose |
+|---|---|---|
+| `spec.md` | Markdown | Functional requirements, constraints, workflows |
+| `schema.sql` | Supabase PostgreSQL | Tables, relations, indexes, explicit RLS policies |
+| `tasks.txt` | Markdown checklist | Atomic Codex `/goal` implementation tasks |
+| `manifest.json` | JSON | Reusable Codex Skill manifest |
+| `AGENTS.md` block | Markdown | Repo-ready agent operating instructions |
+| GitHub issue packet | JSON/Markdown | Issue title, labels, body, checklist |
+| Vault package | Markdown + hash | Corrected session handoff for ArkNet Digital Vault reference |
+
+## Judge Walkthrough
+
+Use this sequence to verify the full loop:
+
+1. Open https://foundersignal-buildweek.vercel.app/
+2. Click **Open Agent Console**.
+3. Enter a founder idea.
+4. Click **Run Workflow**.
+5. Watch the processing runtime install sequence.
+6. Inspect `CYNICAL VC`, `SECURITY ARCHITECT`, and `GROWTH OPERATOR` cards.
+7. Open **Codex Brief**.
+8. Click **Compile Live**.
+9. Inspect `SPEC.MD`, `SCHEMA.SQL`, `TASKS.TXT`, and `MANIFEST.JSON`.
+10. Click **Apply Correction**.
+11. Add: `Must support firm-level data isolation rules`.
+12. Verify the corrected artifacts update.
+13. Open **Vault Handoff**.
+14. Click **Commit Assets** and verify a `SESSION_...` id.
+
+## API Surface
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| `POST` | `/api/agent-confrontation` | Runs VC, security, and growth specialist confrontation |
+| `POST` | `/api/goal-execution` | Converts a target into staged execution |
+| `POST` | `/api/compile-brief` | Generates `spec`, `schema`, `tasks`, and `manifest` |
+| `POST` | `/api/refine-artifacts` | Applies founder correction and returns updated artifacts |
+| `POST` | `/api/github-loop` | Produces GitHub implementation issue packet |
+| `POST` | `/api/vault-commit` | Creates session id and content hash |
+| `GET` | `/api/eve-manifest` | Shows eve-style agent directory contract |
+| `GET` | `/api/cron/founder-signal-check` | Daily signal review hook |
+| `GET` | `/api/system-status` | Live deployment contract counts |
+
+Example:
+
+```bash
+curl -X POST https://foundersignal-buildweek.vercel.app/api/compile-brief \
+  -H "Content-Type: application/json" \
+  -d '{"idea":"Multi-agent LinkedIn lead outreach system","score":82,"risks":["platform policy","deliverability","personalization quality"]}'
+```
 
 ## Use FounderSignal as a Codex Skill
 
 FounderSignal can be used as a reusable Codex workflow, not only as a hosted demo.
 
-1. Copy the agent instructions from `AGENTS.md` into a Codex project or thread.
+1. Copy `AGENTS.md` into a Codex project or thread.
 2. Use `eve-agent/skills/startup-validation.md` as the validation skill.
-3. Use `eve-agent/skills/supabase-rls.md` for database and RLS generation.
+3. Use `eve-agent/skills/supabase-rls.md` for database/RLS generation.
 4. Use `eve-agent/tools/compile_intent.ts` as the compile tool contract.
-5. Use the generated `manifest.json` tab in the live app as the portable skill descriptor.
+5. Use the generated `manifest.json` tab as the portable skill descriptor.
 
-Minimal skill invocation contract:
+Minimal invocation:
 
 ```json
 {
@@ -69,91 +166,63 @@ Minimal skill invocation contract:
 }
 ```
 
-The generated tasks are formatted as independent Markdown checklist items so they can be pasted into a Codex `/goal` execution loop.
-
-## Vercel eve Agent Shape
-
-The repository includes an eve-style durable agent directory:
+## eve Agent Directory
 
 ```text
 eve-agent/
   agent.ts
   instructions.md
   tools/
+    compile_intent.ts
+    create_github_issue_packet.ts
+    commit_vault_handoff.ts
   skills/
+    startup-validation.md
+    supabase-rls.md
   channels/
+    github.ts
   schedules/
+    daily-signal-check.md
   subagents/
+    security-reviewer/
+    growth-operator/
 ```
 
-This mirrors the new Vercel eve model:
-
-- `agent.ts` defines model and runtime configuration.
-- `instructions.md` defines the agent charter.
-- `tools/` defines compile, GitHub, and Vault handoff actions.
-- `skills/` stores reusable startup validation and Supabase RLS instructions.
-- `channels/github.ts` describes GitHub work intake.
-- `schedules/daily-signal-check.md` defines a recurring signal review.
-- `subagents/` delegates security and growth review.
-
-Live proof endpoint:
+Live proof:
 
 ```bash
 curl https://foundersignal-buildweek.vercel.app/api/eve-manifest
 ```
 
-## API Surface
+## GitHub Proof Assets
 
-The public deployment exposes these Build Week endpoints:
-
-```text
-POST /api/agent-confrontation
-POST /api/goal-execution
-POST /api/compile-brief
-POST /api/refine-artifacts
-POST /api/github-loop
-POST /api/vault-commit
-GET  /api/eve-manifest
-GET  /api/cron/founder-signal-check
-```
-
-Example compile request:
-
-```bash
-curl -X POST https://foundersignal-buildweek.vercel.app/api/compile-brief \
-  -H "Content-Type: application/json" \
-  -d "{\"intent\":\"Multi-agent LinkedIn lead outreach system\",\"score\":82,\"risks\":[\"platform policy\",\"deliverability\",\"personalization quality\"]}"
-```
-
-## GitHub Loop
-
-FounderSignal includes repository-facing proof assets:
-
-- `.github/ISSUE_TEMPLATE/foundersignal-compile.yml`
-- `.github/pull_request_template.md`
-- `.github/workflows/foundersignal-agent-evals.yml`
-- `GITHUB_INTEGRATION.md`
-- `SYSTEM_ARCHITECTURE.md`
-
-The app can generate an implementation issue packet through `/api/github-loop`, making the output useful for a real engineering queue instead of ending at a report.
+| File | Purpose |
+|---|---|
+| `.github/ISSUE_TEMPLATE/foundersignal-compile.yml` | Structured compile issue intake |
+| `.github/pull_request_template.md` | PR checklist for artifact changes |
+| `.github/workflows/foundersignal-agent-evals.yml` | Lightweight agent eval workflow |
+| `GITHUB_INTEGRATION.md` | GitHub loop architecture |
+| `SYSTEM_ARCHITECTURE.md` | End-to-end system proof |
+| `SUBMISSION.md` | Devpost narrative and verification path |
 
 ## Security Guardrails
 
 - Generated database artifacts target Supabase PostgreSQL primitives.
 - Every generated table must include `enable row level security`.
 - RLS policies are emitted explicitly for read, insert, update, and delete where applicable.
-- The public demo keeps credential-dependent AI work behind optional environment variables and deterministic fallbacks.
-- ArkNet Digital Vault is referenced as a public continuity handoff layer; this repo does not write into ArkNet OS or the arknet.digital project.
+- Credential-dependent AI work stays behind environment variables and deterministic fallbacks.
+- Public metrics are limited to verifiable proof points, not fake volume or SLA claims.
+- ArkNet Digital Vault is referenced as a public handoff layer; this repo does not write into ArkNet OS or the arknet.digital project.
 
 ## Local Development
 
-Optional environment variable:
+Optional:
 
 ```bash
 GROQ_API_KEY=...
 ```
 
-Run locally with Vercel:
+Run locally:
 
 ```bash
 npx vercel dev
@@ -165,28 +234,27 @@ Deploy:
 npx vercel deploy --prod
 ```
 
-Without `GROQ_API_KEY`, the UI still works with deterministic local artifact generation. With it, `/api/agent-confrontation` and `/api/compile-brief` can use the live model-backed path.
-
 ## File Map
 
 ```text
 index.html                         Product shell and live playground
-platform.css                       Shared platform UI system
-platform.js                        Route shell and navigation helpers
-foundersignal-runtime.js           Compile, refine, vault, and tab interactions
+platform.css                       Shared UI system, syntax colors, logo cards
+platform.js                        Copy buttons and code syntax highlighting
+foundersignal-runtime.js           Workflow, compile, refine, vault, checks
 api/compile-brief.js               Artifact compiler endpoint
 api/refine-artifacts.js            Correction and regression endpoint
 api/github-loop.js                 GitHub issue packet endpoint
 api/vault-commit.js                Vault handoff endpoint
 api/eve-manifest.js                eve agent manifest endpoint
+api/system-status.js               Verified deployment contract endpoint
 eve-agent/                         eve-style agent source
 AGENTS.md                          Codex operating instructions
 SYSTEM_ARCHITECTURE.md             Technical architecture proof
 SUBMISSION.md                      Devpost narrative and judge walkthrough
 ```
 
-## Submission Narrative
+## Build Week Position
 
-FounderSignal compresses the idea-to-execution gap. It lets a founder describe a business system once, then produces the artifacts a developer or Codex agent needs to begin implementation with clear constraints, database security, task order, and correction history.
+FounderSignal compresses the idea-to-execution gap. It lets a founder describe a business system once, then produces the materials a developer or Codex agent needs to begin implementation with clear constraints, database security, task order, and correction history.
 
 The project demonstrates useful intelligence by turning uncertainty into finished materials.
