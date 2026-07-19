@@ -110,10 +110,49 @@
         </div>
       </div>
       <div class="hero-right">
-        <a class="brand-poster" href="/report.html" aria-label="Open FounderSignal Agent Console">
-          <img src="/docs/readme/foundersignal-logo.png" alt="FounderSignal AI-powered intent compiler logo">
-          <span>Identity layer / Open Agent Console</span>
-        </a>
+        <div class="hero-cockpit" aria-label="FounderSignal live compiler cockpit">
+          <div class="cockpit-top">
+            <div class="mini-brand"><span class="logo">FS</span><b>FounderSignal Compiler</b></div>
+            <span class="live-pill"><i></i> Runtime armed</span>
+          </div>
+          <div class="cockpit-intent">
+            <span>Founder intent</span>
+            <strong>Autonomous lead workflow for founder-led B2B teams</strong>
+            <p>Target: repo-ready MVP packet with correction memory and implementation guardrails.</p>
+          </div>
+          <div class="cockpit-rail">
+            <a href="/report.html"><b>01</b><span>Agent confrontation</span><em>VC / Security / Growth</em></a>
+            <a href="/brief.html"><b>02</b><span>Codex brief</span><em>spec.md / schema.sql / tasks.txt</em></a>
+            <a href="/workspace.html"><b>03</b><span>Workspace packet</span><em>/goal / checks / target files</em></a>
+            <a href="/vault-handoff.html"><b>04</b><span>Vault continuity</span><em>session id / content hash</em></a>
+          </div>
+          <div class="artifact-stack">
+            <div class="artifact-window primary">
+              <div><span>schema.sql</span><i>RLS PASS</i></div>
+              <pre>create table public.founder_signal_runs (
+  id uuid primary key default gen_random_uuid(),
+  owner_id uuid references auth.users(id),
+  compiled_payload jsonb not null
+);
+
+alter table public.founder_signal_runs
+  enable row level security;</pre>
+            </div>
+            <div class="artifact-window secondary">
+              <div><span>manifest.json</span><i>SKILL READY</i></div>
+              <pre>{
+  "name": "FounderSignal_Bootstrap",
+  "outputs": ["spec.md", "schema.sql", "tasks.txt"]
+}</pre>
+            </div>
+          </div>
+          <div class="cockpit-bottom">
+            <span>23 routes</span>
+            <span>9 APIs</span>
+            <span>1 cron</span>
+            <a href="/goal.html">Run checks</a>
+          </div>
+        </div>
       </div>
     </section>
 

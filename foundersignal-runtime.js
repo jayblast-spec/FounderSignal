@@ -450,6 +450,7 @@
       ["agent", "/api/agent-confrontation", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(sample) }],
       ["goal", "/api/goal-execution", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...sample, goal: "Generate Codex-ready execution packet" }) }],
       ["compiler", "/api/compile-brief", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(sample) }],
+      ["workspace", "/api/workspace-packet", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(sample) }],
       ["vault", "/api/vault-commit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ state: sample, dry_run: true }) }],
       ["cron", "/api/cron/founder-signal-check", { method: "GET" }],
     ];
