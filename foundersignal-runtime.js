@@ -93,8 +93,142 @@
     });
   }
 
-  function terminalDivider(label) {
-    terminal(`===== ${label} =====`);
+  function primaryTerminal() {
+    return document.querySelector(".terminal-glow");
+  }
+
+  function setAgentRunHeader(sample) {
+    const target = primaryTerminal();
+    if (!target) return;
+    target.innerHTML = `
+      <div class="agent-run-banner">
+        <div>
+          <span class="agent-kicker">Founder Signal Agent Run</span>
+          <strong>${escapeHtml(sample.idea || "Founder intent")}</strong>
+          <small>${escapeHtml(sample.customer || "Target customer")} / ${escapeHtml(sample.industry || "Market")}</small>
+        </div>
+        <span class="agent-state">Live Confrontation</span>
+      </div>
+      <div class="agent-run-grid" data-agent-grid></div>
+    `;
+  }
+
+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  function setProcessingStage(index, status = "active") {
+    const step = document.querySelector(`[data-process-step="${index}"]`);
+    if (!step) return;
+    step.dataset.status = status;
+    const state = step.querySelector("i");
+    if (state) state.textContent = status === "done" ? "done" : "running";
+  }
+
+  function renderProcessingPanel(sample) {
+    const grid = document.querySelector("[data-agent-grid]");
+    if (!grid) return;
+    grid.innerHTML = `
+      <div class="agent-processing" data-agent-processing>
+        <div class="process-orb"><span></span></div>
+        <div class="process-copy">
+          <span>Hold on while we process your request</span>
+          <strong>Installing agent runtime for this founder signal.</strong>
+          <p>We are locking the intake, allocating specialist context, scanning constraints, and preparing the compiler target.</p>
+        </div>
+        <div class="process-steps">
+          ${[
+            ["Lock intake", sample.idea || "Founder intent captured"],
+            ["Allocate runtime", "Provisioning VC, security, and growth subagents"],
+            ["Scan constraints", "Extracting risk, buyer, data, and moat signals"],
+            ["Dispatch model call", "Sending confrontation packet to live function"],
+            ["Prepare handoff", "Mapping output to Codex artifact targets"]
+          ].map((item, index) => `
+            <div class="process-step" data-process-step="${index}" data-status="${index === 0 ? "active" : "pending"}">
+              <i>${index === 0 ? "running" : "queued"}</i>
+              <b>${escapeHtml(item[0])}</b>
+              <small>${escapeHtml(item[1])}</small>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  async function runProcessingSequence(sample, requestPromise) {
+    renderProcessingPanel(sample);
+    const minimumStageMs = 420;
+    for (let index = 0; index < 3; index += 1) {
+      setProcessingStage(index, "active");
+      await wait(minimumStageMs);
+      setProcessingStage(index, "done");
+      setProcessingStage(index + 1, "active");
+    }
+
+    const result = await requestPromise;
+    setProcessingStage(3, "done");
+    setProcessingStage(4, "active");
+    await wait(360);
+    setProcessingStage(4, "done");
+    return result;
+  }
+
+  function splitAgentFindings(content) {
+    const cleanContent = clean(content).replace(/\*\*/g, "");
+    const labels = [
+      "Market", "Urgency", "Defensibility", "Monetization", "Action",
+      "Privacy Risk", "Auth Risk", "Data Risk", "RLS (Row-Level Security) Risk", "RLS Risk", "Operational Risk", "Architecture Constraint", "Constraint",
+      "Distribution", "Proof", "Buyer Objections", "First Campaign", "Launch Move"
+    ];
+    const pattern = new RegExp(`(?:^|\\s)(?:\\d+\\.\\s*)?(${labels.map((label) => label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")}):`, "gi");
+    const matches = [...cleanContent.matchAll(pattern)];
+    if (!matches.length) return [{ label: "Finding", value: cleanContent }];
+
+    return matches.map((match, index) => {
+      const start = match.index + match[0].length;
+      const end = matches[index + 1]?.index ?? cleanContent.length;
+      return {
+        label: match[1],
+        value: cleanContent.slice(start, end).trim(),
+      };
+    }).filter((item) => item.value);
+  }
+
+  function renderAgentCard(agent) {
+    const grid = document.querySelector("[data-agent-grid]");
+    if (!grid) return;
+    const label = agent.title || agent.name || agent.role || agent.key || "SPECIALIST AGENT";
+    const key = (agent.key || label).toString().toLowerCase();
+    const findings = splitAgentFindings(agent.content || agent.output || agent.message || "");
+    const card = document.createElement("article");
+    card.className = `agent-card agent-${escapeHtml(key).replace(/[^a-z0-9-]/g, "-")}`;
+    card.innerHTML = `
+      <header>
+        <span>${escapeHtml(label)}</span>
+        <i>${escapeHtml(key.toUpperCase())}</i>
+      </header>
+      <div class="agent-findings">
+        ${findings.map((finding) => `
+          <div class="agent-finding">
+            <b>${escapeHtml(finding.label)}</b>
+            <p>${escapeHtml(finding.value)}</p>
+          </div>
+        `).join("")}
+      </div>
+    `;
+    grid.appendChild(card);
+  }
+
+  function renderNextStepCard() {
+    const target = primaryTerminal();
+    if (!target) return;
+    const card = document.createElement("div");
+    card.className = "agent-next-step";
+    card.innerHTML = `
+      <span>Regression target ready</span>
+      <strong>Open Compiler to generate SPEC / SCHEMA / TASKS / MANIFEST.</strong>
+      <a href="/brief.html">Open Compiler</a>
+    `;
+    target.appendChild(card);
+    target.scrollTop = target.scrollHeight;
   }
 
   function collectFormState() {
@@ -211,36 +345,45 @@
       trigger.textContent = "Running...";
     }
 
-    clearTerminal();
-    terminalDivider("FOUNDER SIGNAL AGENT RUN");
-    terminal("WORKFLOW STATE CAPTURED...");
-    terminal("RUNNING VC / SECURITY / GROWTH AGENT CONFRONTATION...");
+    setAgentRunHeader(sample);
 
     let agents = localAgentFallback(sample);
-    try {
-      const response = await fetch("/api/agent-confrontation", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(sample),
-      });
-      const payload = await response.json();
-      if (response.ok && Array.isArray(payload.agents) && payload.agents.length) {
-        agents = payload.agents;
-      } else if (payload.error) {
-        terminal(`LIVE MODEL FALLBACK: ${payload.error}`);
+    const requestPromise = (async () => {
+      try {
+        const response = await fetch("/api/agent-confrontation", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(sample),
+        });
+        const payload = await response.json();
+        if (response.ok && Array.isArray(payload.agents) && payload.agents.length) {
+          return { agents: payload.agents };
+        }
+        return { fallback: payload.error || "Live agent endpoint returned a fallback response." };
+      } catch {
+        return { fallback: "Live model fallback: deterministic specialist loop active." };
       }
-    } catch {
-      terminal("LIVE MODEL FALLBACK: deterministic specialist loop active");
+    })();
+
+    const result = await runProcessingSequence(sample, requestPromise);
+    if (result.agents) {
+      agents = result.agents;
+    }
+
+    const grid = document.querySelector("[data-agent-grid]");
+    if (grid) grid.innerHTML = "";
+    if (result.fallback) {
+      const note = document.createElement("div");
+      note.className = "agent-fallback-note";
+      note.textContent = result.fallback;
+      grid?.appendChild(note);
     }
 
     agents.forEach((agent) => {
-      const label = agent.title || agent.name || agent.role || agent.key || "SPECIALIST AGENT";
-      terminalDivider(label);
-      terminal(clean(agent.content || agent.output || agent.message || ""));
+      renderAgentCard(agent);
     });
 
-    terminalDivider("NEXT STEP");
-    terminal("REGRESSION TARGET READY -> OPEN COMPILER TO GENERATE SPEC / SCHEMA / TASKS / MANIFEST");
+    renderNextStepCard();
     toast("Agent workflow complete. Compiler state is ready.");
     if (trigger) {
       trigger.textContent = "Workflow Complete";
