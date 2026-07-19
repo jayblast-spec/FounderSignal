@@ -58,7 +58,7 @@ FounderSignal generates machine-parsable files Codex can use directly:
 ## Slide 7 - Build Week Fit
 
 - **Technical Implementation:** multi-step endpoints, compiler guardrails, diff engine, Vault commit hash.
-- **Design:** one-click demos, tabbed ArtifactViewer, prominent Copy Code for Codex flow.
+- **Design:** one-click mission packets, tabbed ArtifactViewer, visible correction console, GitHub packet surface, and Vault handoff flow.
 - **Impact:** compresses strategy-to-repository planning from hours to minutes.
 
 ## Slide 8 - Judge Walkthrough
@@ -69,5 +69,4 @@ https://foundersignal-buildweek.vercel.app/
 
 Path:
 
-Agent demo -> Codex Brief -> Compile Live -> Apply Correction + Recompile -> Manifest/Schema -> Vault Handoff
-
+Agent Mission -> Run Workflow -> Codex Brief -> Compile Live -> Founder Correction -> Manifest/Schema -> Launch Assets -> Vault Handoff

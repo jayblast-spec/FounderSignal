@@ -48,16 +48,17 @@ Note: public metrics are limited to verifiable Build Week proof points. FounderS
 ```
 
 1. Open https://foundersignal-buildweek.vercel.app/
-2. Click **Agent** demo.
-3. Open **Codex Brief**.
-4. Click **Compile Live**.
-5. In **Critique the Analysis**, enter: `Must support completely localized data isolation rules.`
-6. Click **Apply Correction + Recompile**.
-7. Verify **System Updated: Regression check passed**.
-8. Inspect **SCHEMA.SQL** and **MANIFEST.JSON**.
-9. Click **Copy Code for Codex**.
-10. Open **Vault Handoff**.
-11. Click **Save to ArkNet Vault** and verify the `SESSION_...` commit id.
+2. Click **Open Agent Console**.
+3. Select **Agent Mission** or another mission packet.
+4. Click **Run Workflow** and inspect the VC, security, and growth cards.
+5. Open **Codex Brief**.
+6. Click **Compile Live**.
+7. In **Founder correction**, enter: `Must support completely localized data isolation rules.`
+8. Click **Apply Correction**.
+9. Verify **System updated: regression check passed** and inspect **SCHEMA.SQL** plus **MANIFEST.JSON**.
+10. Open **Launch Assets** and click **Generate GitHub Packet**.
+11. Open **Vault Handoff**.
+12. Click **Commit Assets** and verify the `SESSION_...` commit id.
 
 ## Technical Implementation
 
