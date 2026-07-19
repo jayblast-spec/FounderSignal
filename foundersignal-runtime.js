@@ -309,6 +309,22 @@
     },
   };
 
+  const missionPackets = {
+    saas: scenarios["deploy service"],
+    local: scenarios["generate inventory dashboard"],
+    agent: scenarios["activate sales agent"],
+  };
+
+  function applyFormState(sample) {
+    const fields = [...document.querySelectorAll("textarea,input,select")];
+    if (fields[0]) fields[0].value = sample.idea || "";
+    if (fields[1]) fields[1].value = sample.customer || "";
+    if (fields[2]) fields[2].value = sample.industry || "Productivity";
+    if (fields[3]) fields[3].value = sample.edge || "";
+    if (fields[4]) fields[4].value = sample.concern || "";
+    document.querySelector(".form-status b")?.replaceChildren(document.createTextNode(`${sample.label || "Demo"} packet loaded`));
+  }
+
   function codeContainer() {
     return document.querySelector("#artifact-code") || document.querySelector("[data-artifact-output]");
   }
@@ -557,6 +573,15 @@
     }
     if (lower.includes("run workflow")) {
       event.preventDefault(); event.stopImmediatePropagation(); await runWorkflow(button); return;
+    }
+    const packetButton = event.target.closest("[data-demo-packet]");
+    if (packetButton) {
+      event.preventDefault(); event.stopImmediatePropagation();
+      const packet = missionPackets[packetButton.dataset.demoPacket] || missionPackets.agent;
+      save(packet);
+      applyFormState(packet);
+      toast(`${clean(packetButton.querySelector("b")?.textContent || "Mission")} loaded`);
+      return;
     }
     if (scenarios[lower]) {
       event.preventDefault(); event.stopImmediatePropagation();
