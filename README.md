@@ -61,6 +61,7 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 | Live product | https://foundersignal-buildweek.vercel.app/ | Public Build Week experience |
 | Agent Console | https://foundersignal-buildweek.vercel.app/report.html | Run VC, security, and growth confrontation |
 | Codex Brief | https://foundersignal-buildweek.vercel.app/brief.html | Compile `spec.md`, `schema.sql`, `tasks.txt`, `manifest.json` |
+| Launch Assets | https://foundersignal-buildweek.vercel.app/assets.html | Generate GitHub implementation packets |
 | Repository Skill | https://foundersignal-buildweek.vercel.app/documentation/repository/ | Use FounderSignal as a Codex workflow |
 | eve Agent | https://foundersignal-buildweek.vercel.app/eve/ | Durable agent directory proof |
 | Vault Handoff | https://foundersignal-buildweek.vercel.app/vault-handoff.html | Package corrected session for continuity |
@@ -139,18 +140,19 @@ Use this sequence to verify the full loop:
 
 1. Open https://foundersignal-buildweek.vercel.app/
 2. Click **Open Agent Console**.
-3. Enter a founder idea.
+3. Select **Agent Mission**, **SaaS Mission**, or **Local Biz Mission**.
 4. Click **Run Workflow**.
 5. Watch the processing runtime install sequence.
 6. Inspect `CYNICAL VC`, `SECURITY ARCHITECT`, and `GROWTH OPERATOR` cards.
 7. Open **Codex Brief**.
 8. Click **Compile Live**.
 9. Inspect `SPEC.MD`, `SCHEMA.SQL`, `TASKS.TXT`, and `MANIFEST.JSON`.
-10. Click **Apply Correction**.
-11. Add: `Must support firm-level data isolation rules`.
-12. Verify the corrected artifacts update.
-13. Open **Vault Handoff**.
-14. Click **Commit Assets** and verify a `SESSION_...` id.
+10. Add a founder correction, then click **Apply Correction**.
+11. Verify the corrected artifacts update in place.
+12. Open **Launch Assets**.
+13. Click **Generate GitHub Packet**.
+14. Open **Vault Handoff**.
+15. Click **Commit Assets** and verify a `SESSION_...` id.
 
 ## API Surface
 
