@@ -190,6 +190,7 @@ h1 span { color: var(--accent-2); white-space: nowrap; }
   display: grid;
   gap: 16px;
   transform: translateY(18px);
+  align-self: center;
 }
 .brand-poster {
   position: relative;
@@ -209,7 +210,8 @@ h1 span { color: var(--accent-2); white-space: nowrap; }
 .brand-poster img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 8.7;
+  min-height: 420px;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: center;
 }
@@ -797,6 +799,75 @@ footer {
 .final-cta { border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(700px 320px at 50% 0%, rgba(16,185,129,.14), transparent 70%), rgba(16,17,19,.82); padding: 54px; margin: 54px 0 88px; }
 .final-cta h2 { max-width: 900px; font-size: clamp(38px, 5vw, 72px); line-height: 1; }
 .final-cta p { color: var(--muted); max-width: 720px; font-size: 18px; line-height: 1.7; }
+.builder-proof-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: center;
+}
+.builder-proof-card {
+  display: grid;
+  gap: 12px;
+  border: 1px solid rgba(16,185,129,.34);
+  border-radius: 18px;
+  background:
+    radial-gradient(320px 180px at 50% 0%, rgba(16,185,129,.15), transparent 72%),
+    rgba(9,9,11,.92);
+  padding: 24px;
+  box-shadow: 0 28px 90px rgba(0,0,0,.28), 0 0 70px rgba(16,185,129,.08);
+}
+.builder-proof-card img {
+  width: 122px;
+  height: 122px;
+  object-fit: cover;
+  border: 1px solid rgba(16,185,129,.3);
+  border-radius: 28px;
+}
+.builder-proof-card span {
+  color: var(--accent-2);
+  font: 900 10px ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.builder-proof-card b {
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.25;
+}
+.proof-grid, .manifest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+.proof-grid a {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(16,17,19,.82);
+  padding: 20px;
+  transition: all .2s ease;
+}
+.proof-grid a:hover {
+  border-color: rgba(16,185,129,.58);
+  transform: translateY(-2px);
+}
+.proof-grid span {
+  color: var(--accent-2);
+  font: 900 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.proof-grid b {
+  display: block;
+  margin: 12px 0 8px;
+  color: var(--text);
+  font-size: 20px;
+}
+.proof-grid p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+.manifest-grid article {
+  min-height: 245px;
+}
 .site-footer { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 42px; align-items: start; }
 .site-footer div { display: grid; gap: 10px; color: var(--muted); }
 .site-footer b { color: var(--text); }
@@ -1245,9 +1316,9 @@ input:focus, textarea:focus, select:focus { border-color: var(--accent); box-sha
 @media (max-width: 900px) {
   .topbar { height: auto; padding: 16px; flex-wrap: wrap; }
   .nav { order: 3; width: 100%; overflow-x: auto; }
-  .hero, .workflow, .doc-layout, .two-col { grid-template-columns: 1fr; }
+  .hero, .workflow, .doc-layout, .two-col, .builder-proof-hero { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding: 48px 0; }
-  .grid-three, .pricing-grid, .status-grid, .comparison, .scenario-steps, .capability-grid, .site-footer, .alpha-table > div, .command-stack, .command-rail, .api-grid { grid-template-columns: 1fr; }
+  .grid-three, .pricing-grid, .status-grid, .comparison, .scenario-steps, .capability-grid, .site-footer, .alpha-table > div, .command-stack, .command-rail, .api-grid, .proof-grid, .manifest-grid { grid-template-columns: 1fr; }
   .alpha-table b, .alpha-table span { border-right: 0; border-bottom: 1px solid var(--line); }
   .final-cta { padding: 28px; }
   .copyright { display: grid; gap: 8px; }
@@ -1257,6 +1328,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--accent); box-sha
   .mission-strip { grid-template-columns: 1fr; }
   .preview-stage { min-height: auto; }
   .preview-card, .preview-card:nth-child(2), .preview-card:hover { transform: none; }
+  .brand-poster img { min-height: 260px; }
   .subpage-hero-art div { position: static; border-radius: 0; border-left: 0; border-right: 0; border-bottom: 0; }
   .subpage-hero-art div { display: grid; }
   .subpage-hero-art b { text-align: left; }

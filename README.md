@@ -79,6 +79,7 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 | Agent Console | https://foundersignal-buildweek.vercel.app/report.html | Run VC, security, and growth confrontation |
 | Codex Brief | https://foundersignal-buildweek.vercel.app/brief.html | Compile `spec.md`, `schema.sql`, `tasks.txt`, `manifest.json` |
 | Launch Assets | https://foundersignal-buildweek.vercel.app/assets.html | Generate GitHub implementation packets |
+| Builder Proof | https://foundersignal-buildweek.vercel.app/builder.html | Inspect the live system, repo, and proof surfaces |
 | Repository Skill | https://foundersignal-buildweek.vercel.app/documentation/repository/ | Use FounderSignal as a Codex workflow |
 | eve Agent | https://foundersignal-buildweek.vercel.app/eve/ | Durable agent directory proof |
 | Vault Handoff | https://foundersignal-buildweek.vercel.app/vault-handoff.html | Package corrected session for continuity |

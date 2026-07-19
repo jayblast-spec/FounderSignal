@@ -61,22 +61,6 @@
           <img src="/docs/readme/foundersignal-logo.png" alt="FounderSignal AI-powered intent compiler logo">
           <span>Identity layer / Open Agent Console</span>
         </a>
-        <div class="playground hero-terminal">
-        <div class="code-head"><span><i></i><i></i><i></i> Pipeline Shell</span><button data-copy="#hero-code">Copy</button></div>
-        <pre id="hero-code"><code><span class="code-comment">// Compile founder intent into a repo-ready packet</span>
-
-<span class="code-prompt">$</span> <span class="code-command">curl</span> <span class="code-flag">-X</span> <span class="code-method">POST</span> <span class="code-url">https://foundersignal-buildweek.vercel.app/api/compile-brief</span> <span class="code-muted">\</span>
-  <span class="code-flag">-H</span> <span class="code-string">"Content-Type: application/json"</span> <span class="code-muted">\</span>
-  <span class="code-flag">-d</span> <span class="code-string">'{"idea":"B2B AI document summary engine","score":84}'</span>
-
-<span class="code-comment">// Response payload returns structured artifacts</span>
-
-<span class="code-brace">{</span>
-  <span class="code-key">"status"</span>: <span class="code-string">"compiled"</span>,
-  <span class="code-key">"runtime"</span>: <span class="code-string">"vercel-functions"</span>,
-  <span class="code-key">"artifacts"</span>: [<span class="code-string">"spec.md"</span>, <span class="code-string">"schema.sql"</span>, <span class="code-string">"tasks.txt"</span>, <span class="code-string">"manifest.json"</span>]
-<span class="code-brace">}</span></code></pre>
-        </div>
       </div>
     </section>
 
@@ -201,14 +185,14 @@
     <section class="final-cta">
       <h2>Move from AI-assisted coding to autonomous system engineering.</h2>
       <p>Run the agent loop, apply one correction, inspect the generated artifacts, then hand the packet to Codex or the Vault continuity layer.</p>
-      <div class="hero-actions"><a class="cta large" href="/report.html">Run Agent Loop</a><a class="ghost large" href="/documentation/repository/">Use as Codex Skill</a></div>
+      <div class="hero-actions"><a class="cta large" href="/report.html">Run Agent Loop</a><a class="ghost large" href="/builder.html">Builder Proof</a><a class="ghost large" href="/documentation/repository/">Use as Codex Skill</a></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div><a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a><p>Compile raw intent into execution-ready systems.</p></div>
     <div><b>Product</b><a href="/products/validation-engine/">Validation Engine</a><a href="/products/codex-compiler/">Codex Compiler</a><a href="/pricing/">Pricing</a></div>
-    <div><b>Resources</b><a href="/documentation/">Documentation</a><a href="/documentation/core-concepts/">Core Concepts</a><a href="/documentation/api-reference/">API Reference</a><a href="/eve/">Eve Agent</a></div>
+    <div><b>Resources</b><a href="/documentation/">Documentation</a><a href="/documentation/core-concepts/">Core Concepts</a><a href="/documentation/api-reference/">API Reference</a><a href="/builder.html">Builder Proof</a><a href="/eve/">Eve Agent</a></div>
     <div><b>Workflow</b><a href="/report.html">Agent Loop</a><a href="/brief.html">Codex Brief</a><a href="/vault-handoff.html">Vault Handoff</a></div>
   </footer>
   <div class="copyright">(c) 2026 FounderSignal Labs. All rights reserved. <span>v1.6.1 - workflow-core</span></div>
