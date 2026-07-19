@@ -12,6 +12,12 @@ Most founders do not need more ideas. They need a deterministic execution system
 
 https://foundersignal-buildweek.vercel.app/
 
+## Builder Proof
+
+https://foundersignal-buildweek.vercel.app/builder.html
+
+Use this route when a reviewer wants the shortest path to inspect the full public proof set: live workflow, Codex compiler, API reference, GitHub packet, eve agent directory, Vault handoff, repository link, and submission materials.
+
 ## Project Narrative
 
 FounderSignal proves that the gap between founder strategy and repository bootstrapping can be compressed dramatically. The platform runs a multi-step validation pipeline, processes practitioner corrections through a `previous_response_id` continuity contract, and outputs structured technical blueprints ready for Codex or an automated IDE workspace.
@@ -59,6 +65,7 @@ Note: public metrics are limited to verifiable Build Week proof points. FounderS
 10. Open **Launch Assets** and click **Generate GitHub Packet**.
 11. Open **Vault Handoff**.
 12. Click **Commit Assets** and verify the `SESSION_...` commit id.
+13. Open **Builder Proof** to inspect the full evidence map and repository link.
 
 ## Technical Implementation
 

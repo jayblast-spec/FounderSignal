@@ -70,3 +70,13 @@ https://foundersignal-buildweek.vercel.app/
 Path:
 
 Agent Mission -> Run Workflow -> Codex Brief -> Compile Live -> Founder Correction -> Manifest/Schema -> Launch Assets -> Vault Handoff
+
+## Slide 9 - Builder Proof
+
+Open:
+
+https://foundersignal-buildweek.vercel.app/builder.html
+
+Purpose:
+
+Show the reviewer the full proof surface in one place: live product route, GitHub repo, Codex artifact compiler, API docs, eve-style agent directory, GitHub packet, Vault handoff, and verified deployment contract.
