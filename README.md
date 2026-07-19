@@ -79,10 +79,18 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 | Agent Console | https://foundersignal-buildweek.vercel.app/report.html | Run VC, security, and growth confrontation |
 | Codex Brief | https://foundersignal-buildweek.vercel.app/brief.html | Compile `spec.md`, `schema.sql`, `tasks.txt`, `manifest.json` |
 | Launch Assets | https://foundersignal-buildweek.vercel.app/assets.html | Generate GitHub implementation packets |
+| Product: Agent Console | https://foundersignal-buildweek.vercel.app/products/agent-console/ | Product page for the confrontation surface |
+| Product: GitHub Loop | https://foundersignal-buildweek.vercel.app/products/github-loop/ | Product page for implementation issue packets |
+| Product: Vault Continuity | https://foundersignal-buildweek.vercel.app/products/vault-continuity/ | Product page for session handoff |
 | Builder Proof | https://foundersignal-buildweek.vercel.app/builder.html | Inspect the live system, repo, and proof surfaces |
 | Repository Skill | https://foundersignal-buildweek.vercel.app/documentation/repository/ | Use FounderSignal as a Codex workflow |
 | eve Agent | https://foundersignal-buildweek.vercel.app/eve/ | Durable agent directory proof |
 | Vault Handoff | https://foundersignal-buildweek.vercel.app/vault-handoff.html | Package corrected session for continuity |
+| Workspace Packet | https://foundersignal-buildweek.vercel.app/workspace.html | Copy-ready handoff for Codex, GPT, and vibe coders |
+| Changelog | https://foundersignal-buildweek.vercel.app/resources/changelog/ | Product update log |
+| Resource Status | https://foundersignal-buildweek.vercel.app/resources/status/ | Human-readable status page |
+| Community | https://foundersignal-buildweek.vercel.app/resources/community/ | Clone, test, correct, and reuse path |
+| Proof Scenarios | https://foundersignal-buildweek.vercel.app/resources/customer-stories/ | SaaS, local business, and agent workflow scenarios |
 | System Status | https://foundersignal-buildweek.vercel.app/api/system-status | Verified route/artifact/cron contract |
 
 ## What FounderSignal Does
@@ -182,6 +190,7 @@ Use this sequence to verify the full loop:
 | `POST` | `/api/refine-artifacts` | Applies founder correction and returns updated artifacts |
 | `POST` | `/api/github-loop` | Produces GitHub implementation issue packet |
 | `POST` | `/api/vault-commit` | Creates session id and content hash |
+| `POST` | `/api/workspace-packet` | Generates a `/goal`, acceptance criteria, target files, guardrails, and copy-ready prompt |
 | `GET` | `/api/eve-manifest` | Shows eve-style agent directory contract |
 | `GET` | `/api/cron/founder-signal-check` | Daily signal review hook |
 | `GET` | `/api/system-status` | Live deployment contract counts |

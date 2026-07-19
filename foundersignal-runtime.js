@@ -30,12 +30,14 @@
     "Codex Brief": "brief.html",
     "Launch Assets": "assets.html",
     "Vault Handoff": "vault-handoff.html",
+    "Workspace Packet": "workspace.html",
     "/goal": "goal.html",
     "/GOAL_CHECK": "goal.html",
     agent_loop: "report.html",
     "agent loop": "report.html",
     compiler: "brief.html",
     vault: "vault-handoff.html",
+    workspace: "workspace.html",
     AGENT_LOGS: "report.html",
     "API Docs": "SUBMISSION.md",
     Security: "AGENTS.md",
@@ -569,6 +571,45 @@
     }
   }
 
+  async function generateWorkspacePacket(trigger) {
+    const originalText = trigger?.textContent;
+    if (trigger) {
+      trigger.disabled = true;
+      trigger.textContent = "Generating Packet...";
+    }
+    terminal("BUILDING WORKSPACE PACKET FOR CODEX / GPT / VIBE CODER HANDOFF...");
+    const response = await fetch("/api/workspace-packet", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...state(), target: "repo-ready MVP implementation", mode: "Codex + GPT + vibe coder relay" }),
+    });
+    const payload = await response.json();
+    const packet = payload.packet || {};
+    const target = document.querySelector("[data-workspace-output]");
+    if (target) {
+      target.innerHTML = `
+        <div class="packet-card">
+          <span>Workspace packet ready</span>
+          <strong>Copy this into Codex, GPT, or a builder workspace.</strong>
+          <pre>${escapeHtml(packet.markdown || JSON.stringify(payload, null, 2))}</pre>
+          <button class="cta" type="button" data-copy-workspace>Copy Workspace Packet</button>
+        </div>
+      `;
+      const copy = target.querySelector("[data-copy-workspace]");
+      copy?.addEventListener("click", () => {
+        navigator.clipboard.writeText(packet.markdown || JSON.stringify(payload, null, 2)).then(() => toast("Workspace packet copied"));
+      });
+    }
+    toast("Workspace packet generated");
+    if (trigger) {
+      trigger.textContent = "Packet Ready";
+      setTimeout(() => {
+        trigger.disabled = false;
+        trigger.textContent = originalText || "Generate Workspace Packet";
+      }, 1500);
+    }
+  }
+
   function copyArtifact() {
     navigator.clipboard.writeText(currentArtifacts[activeArtifact] || "").then(() => toast(`${activeArtifact.toUpperCase()} copied for Codex`));
   }
@@ -647,6 +688,9 @@
     }
     if (lower.includes("generate github packet") || lower.includes("issue packet")) {
       event.preventDefault(); event.stopImmediatePropagation(); await generateGithubPacket(button); return;
+    }
+    if (lower.includes("generate workspace packet") || lower.includes("workspace packet")) {
+      event.preventDefault(); event.stopImmediatePropagation(); await generateWorkspacePacket(button); return;
     }
     if (lower.includes("open compiler") || lower.includes("compile live")) {
       event.preventDefault(); event.stopImmediatePropagation(); save(collectFormState()); if (location.pathname.endsWith("/brief.html")) await compileArtifacts(); else route("brief.html"); return;

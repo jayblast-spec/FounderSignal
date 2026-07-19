@@ -8,14 +8,22 @@ const routes = [
   "/goal.html",
   "/assets.html",
   "/vault-handoff.html",
+  "/workspace.html",
   "/documentation/",
   "/documentation/repository/",
   "/documentation/core-concepts/",
   "/documentation/api-reference/",
   "/products/validation-engine/",
   "/products/codex-compiler/",
+  "/products/agent-console/",
+  "/products/github-loop/",
+  "/products/vault-continuity/",
   "/pricing/",
   "/eve/",
+  "/resources/changelog/",
+  "/resources/status/",
+  "/resources/community/",
+  "/resources/customer-stories/",
 ];
 
 const apiRoutes = [
@@ -25,6 +33,7 @@ const apiRoutes = [
   "/api/refine-artifacts",
   "/api/github-loop",
   "/api/vault-commit",
+  "/api/workspace-packet",
   "/api/eve-manifest",
   "/api/cron/founder-signal-check",
 ];

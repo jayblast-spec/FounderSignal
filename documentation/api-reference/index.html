@@ -25,14 +25,17 @@
     <article class="doc">
       <p class="eyebrow">API Reference</p>
       <h1>Compiler endpoints for the full agentic loop.</h1>
-      <p>FounderSignal exposes a small public API surface that proves the workflow is more than static text. The endpoints run agent confrontation, artifact compilation, correction refinement, GitHub packet generation, Vault handoff, eve manifest inspection, Cron verification, and system-status checks.</p>
+      <p>FounderSignal exposes a small public API surface that proves the workflow is more than static text. The endpoints run agent confrontation, artifact compilation, correction refinement, workspace packet generation, GitHub packet generation, Vault handoff, eve manifest inspection, Cron verification, and system-status checks.</p>
 
       <div class="api-grid">
         <article><span>POST</span><b>/api/agent-confrontation</b><p>Runs VC, security, and growth specialist checks.</p></article>
         <article><span>POST</span><b>/api/compile-brief</b><p>Returns `spec`, `schema`, `tasks`, and `manifest` artifacts.</p></article>
         <article><span>POST</span><b>/api/refine-artifacts</b><p>Applies founder correction and returns updated artifacts.</p></article>
+        <article><span>POST</span><b>/api/workspace-packet</b><p>Generates a Codex/GPT/vibe-coder handoff packet with `/goal`, files, guardrails, and acceptance checks.</p></article>
         <article><span>POST</span><b>/api/github-loop</b><p>Creates a GitHub issue packet or issue when repo credentials are configured.</p></article>
         <article><span>POST</span><b>/api/vault-commit</b><p>Returns a session id and SHA-256 content hash.</p></article>
+        <article><span>GET</span><b>/api/eve-manifest</b><p>Returns the eve-style agent directory contract.</p></article>
+        <article><span>GET</span><b>/api/cron/founder-signal-check</b><p>Runs the daily signal review hook.</p></article>
         <article><span>GET</span><b>/api/system-status</b><p>Verifies route, artifact, and Cron contracts.</p></article>
       </div>
 
@@ -42,6 +45,14 @@
         <pre id="compile-api"><code>curl -X POST https://foundersignal-buildweek.vercel.app/api/compile-brief \
   -H "Content-Type: application/json" \
   -d '{"idea":"B2B AI workflow","customer":"founder-led teams","score":88}'</code></pre>
+      </div>
+
+      <h2>Workspace Packet</h2>
+      <div class="playground">
+        <div class="code-head"><span>POST /api/workspace-packet</span><button data-copy="#workspace-api">Copy</button></div>
+        <pre id="workspace-api"><code>curl -X POST https://foundersignal-buildweek.vercel.app/api/workspace-packet \
+  -H "Content-Type: application/json" \
+  -d '{"idea":"AI onboarding agent for service founders","customer":"solo service operators","score":86,"corrections":["Keep MVP under one week"]}'</code></pre>
       </div>
 
       <h2>Correction Loop</h2>

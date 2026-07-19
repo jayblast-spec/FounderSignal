@@ -14,10 +14,63 @@
 <body>
   <header class="topbar">
     <a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a>
-    <nav class="nav">
-      <a href="/products/validation-engine/">Products</a>
-      <a href="/documentation/">Documentation</a>
+    <nav class="nav platform-nav" aria-label="Primary navigation">
+      <div class="nav-item">
+        <button class="mega-trigger" type="button">Products</button>
+        <div class="mega-panel" role="menu">
+          <div class="mega-grid">
+            <div>
+              <p>Core products</p>
+              <a href="/products/validation-engine/"><span>VE</span><b>Validation Engine</b><em>Market, security, and growth checks.</em></a>
+              <a href="/products/codex-compiler/"><span>CC</span><b>Codex Compiler</b><em>Spec, schema, tasks, and manifest.</em></a>
+              <a href="/products/agent-console/"><span>AC</span><b>Agent Console</b><em>Live confrontation surface.</em></a>
+              <a href="/products/github-loop/"><span>GH</span><b>GitHub Loop</b><em>Issue packets for engineering queues.</em></a>
+              <a href="/products/vault-continuity/"><span>VA</span><b>Vault Continuity</b><em>Corrected sessions packaged for handoff.</em></a>
+            </div>
+            <div>
+              <p>Developer surfaces</p>
+              <a href="/documentation/api-reference/"><span>API</span><b>API Reference</b><em>Live serverless route contract.</em></a>
+              <a href="/documentation/repository/"><span>SK</span><b>Codex Skill</b><em>Reusable workflow instructions.</em></a>
+              <a href="/workspace.html"><span>WP</span><b>Workspace Packet</b><em>Copy-ready handoff for Codex, GPT, and vibe coders.</em></a>
+              <a href="/eve/"><span>EV</span><b>eve Agent Shape</b><em>Tools, skills, channels, schedules.</em></a>
+              <a href="/goal.html"><span>OK</span><b>Live Checks</b><em>Status, cron, and endpoint checks.</em></a>
+            </div>
+            <a class="mega-feature" href="/report.html">
+              <img src="/docs/readme/foundersignal-icon.png" alt="">
+              <b>Open Agent Console</b>
+              <span>Start with the main FounderSignal workflow.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="mega-trigger" type="button">Resources</button>
+        <div class="mega-panel resources-panel" role="menu">
+          <div class="mega-grid">
+            <div>
+              <p>Build proof</p>
+              <a href="/resources/changelog/"><span>CL</span><b>Changelog</b><em>Latest product updates.</em></a>
+              <a href="/resources/status/"><span>ST</span><b>System Status</b><em>Route, artifact, API, and cron contract.</em></a>
+              <a href="/resources/customer-stories/"><span>PS</span><b>Proof Scenarios</b><em>SaaS, local, and agent workflow demos.</em></a>
+              <a href="/builder.html"><span>BP</span><b>Builder Proof</b><em>Repository and verification surface.</em></a>
+            </div>
+            <div>
+              <p>Community paths</p>
+              <a href="/resources/community/"><span>CM</span><b>Community</b><em>Clone, test, correct, and share the workflow.</em></a>
+              <a href="https://github.com/jayblast-spec/FounderSignal" target="_blank" rel="noopener"><span>GH</span><b>GitHub</b><em>View the public repository.</em></a>
+              <a href="/documentation/core-concepts/"><span>CC</span><b>Core Concepts</b><em>Compiler, correction loop, and handoff.</em></a>
+              <a href="/documentation/"><span>QS</span><b>Quickstart</b><em>How to test the project quickly.</em></a>
+            </div>
+            <a class="mega-feature" href="/api/system-status">
+              <span class="feature-terminal">200</span>
+              <b>Live Status JSON</b>
+              <span>Inspect the deployed system contract.</span>
+            </a>
+          </div>
+        </div>
+      </div>
       <a href="/pricing/">Pricing</a>
+      <a href="/documentation/">Docs</a>
       <a href="/eve/">Eve Agent</a>
     </nav>
     <div class="nav-actions">
@@ -52,7 +105,7 @@
         </div>
         <div class="metric-row" id="system-metrics" aria-live="polite">
           <div><b data-status-count="artifacts">4/4</b><span>Artifact types verified</span></div>
-          <div><b data-status-count="routes">15/15</b><span>Live routes healthy</span></div>
+          <div><b data-status-count="routes">23/23</b><span>Live routes healthy</span></div>
           <div><b data-status-count="cron">1/1</b><span>Daily agent check configured</span></div>
         </div>
       </div>
@@ -182,6 +235,13 @@
       </div>
     </section>
 
+    <section class="section codex-command">
+      <p class="section-label">06 - Workspace Packet</p>
+      <h2>A smoother handoff for Codex, GPT, and vibe coders.</h2>
+      <p class="lead">FounderSignal now creates a productive relay packet: a `/goal`, acceptance criteria, target files, guardrails, and copy-ready implementation prompt. It makes the workflow useful even when the builder is not a senior architect.</p>
+      <div class="hero-actions"><a class="cta large" href="/workspace.html">Generate Workspace Packet</a><a class="ghost large" href="/documentation/api-reference/">View API Contract</a></div>
+    </section>
+
     <section class="final-cta">
       <h2>Move from AI-assisted coding to autonomous system engineering.</h2>
       <p>Run the agent loop, apply one correction, inspect the generated artifacts, then hand the packet to Codex or the Vault continuity layer.</p>
@@ -191,9 +251,9 @@
 
   <footer class="site-footer">
     <div><a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a><p>Compile raw intent into execution-ready systems.</p></div>
-    <div><b>Product</b><a href="/products/validation-engine/">Validation Engine</a><a href="/products/codex-compiler/">Codex Compiler</a><a href="/pricing/">Pricing</a></div>
-    <div><b>Resources</b><a href="/documentation/">Documentation</a><a href="/documentation/core-concepts/">Core Concepts</a><a href="/documentation/api-reference/">API Reference</a><a href="/builder.html">Builder Proof</a><a href="/eve/">Eve Agent</a></div>
-    <div><b>Workflow</b><a href="/report.html">Agent Loop</a><a href="/brief.html">Codex Brief</a><a href="/vault-handoff.html">Vault Handoff</a></div>
+    <div><b>Product</b><a href="/products/validation-engine/">Validation Engine</a><a href="/products/codex-compiler/">Codex Compiler</a><a href="/products/agent-console/">Agent Console</a><a href="/products/github-loop/">GitHub Loop</a><a href="/products/vault-continuity/">Vault Continuity</a><a href="/pricing/">Pricing</a></div>
+    <div><b>Resources</b><a href="/documentation/">Documentation</a><a href="/resources/changelog/">Changelog</a><a href="/resources/status/">Status</a><a href="/resources/community/">Community</a><a href="/resources/customer-stories/">Proof Scenarios</a><a href="/builder.html">Builder Proof</a></div>
+    <div><b>Workflow</b><a href="/report.html">Agent Loop</a><a href="/brief.html">Codex Brief</a><a href="/workspace.html">Workspace Packet</a><a href="/goal.html">Live Checks</a><a href="/eve/">Eve Agent</a><a href="/vault-handoff.html">Vault Handoff</a></div>
   </footer>
   <div class="copyright">(c) 2026 FounderSignal Labs. All rights reserved. <span>v1.6.1 - workflow-core</span></div>
   <script src="platform.js"></script>
