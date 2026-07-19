@@ -91,7 +91,7 @@ https://foundersignal-buildweek.vercel.app/api/system-status
 
 Current contract:
 
-- 24 public routes
+- 25 public routes
 - 9 serverless API routes
 - 4 artifact types
 - 1 Vercel cron endpoint

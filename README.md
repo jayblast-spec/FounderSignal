@@ -27,7 +27,7 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 </p>
 
 <p>
-  <img alt="FounderSignal Logo" src="docs/readme/foundersignal-logo.png" width="760">
+  <img alt="FounderSignal product preview" src="docs/readme/slide-01-home.png" width="760">
 </p>
 
 <p>
@@ -77,6 +77,7 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 |---|---|---|
 | Live product | https://foundersignal-buildweek.vercel.app/ | Public Build Week experience |
 | 90 Sec Demo | https://foundersignal-buildweek.vercel.app/demo.html | Guided judge walkthrough |
+| Devpost Copy | https://foundersignal-buildweek.vercel.app/DEVPOST_COPY.md | Short submission-ready copy block |
 | Agent Console | https://foundersignal-buildweek.vercel.app/report.html | Run VC, security, and growth confrontation |
 | Codex Brief | https://foundersignal-buildweek.vercel.app/brief.html | Compile `spec.md`, `schema.sql`, `tasks.txt`, `manifest.json` |
 | Launch Assets | https://foundersignal-buildweek.vercel.app/assets.html | Generate GitHub implementation packets |
@@ -104,6 +105,7 @@ Founder intent
   -> Codex-ready brief
   -> Correction loop
   -> Supabase RLS schema
+  -> Workspace packet
   -> GitHub issue packet
   -> eve-compatible skill files
   -> Vault handoff package
@@ -158,6 +160,7 @@ No unsupported benchmark claims are made. The point is architecture: other engin
 | `tasks.txt` | Markdown checklist | Atomic Codex `/goal` implementation tasks |
 | `manifest.json` | JSON | Reusable Codex Skill manifest |
 | `AGENTS.md` block | Markdown | Repo-ready agent operating instructions |
+| Workspace Packet | Markdown + prompt | Copy-ready `/goal`, acceptance criteria, target files, and guardrails |
 | GitHub issue packet | JSON/Markdown | Issue title, labels, body, checklist |
 | Vault package | Markdown + hash | Corrected session handoff for ArkNet Digital Vault reference |
 
@@ -165,8 +168,8 @@ No unsupported benchmark claims are made. The point is architecture: other engin
 
 Use this sequence to verify the full loop:
 
-1. Open https://foundersignal-buildweek.vercel.app/
-2. Click **Open Agent Console**.
+1. Open https://foundersignal-buildweek.vercel.app/demo.html
+2. Click **Start at Agent Console**.
 3. Select **Agent Mission**, **SaaS Mission**, or **Local Biz Mission**.
 4. Click **Run Workflow**.
 5. Watch the processing runtime install sequence.
@@ -176,10 +179,13 @@ Use this sequence to verify the full loop:
 9. Inspect `SPEC.MD`, `SCHEMA.SQL`, `TASKS.TXT`, and `MANIFEST.JSON`.
 10. Add a founder correction, then click **Apply Correction**.
 11. Verify the corrected artifacts update in place.
-12. Open **Launch Assets**.
-13. Click **Generate GitHub Packet**.
-14. Open **Vault Handoff**.
-15. Click **Commit Assets** and verify a `SESSION_...` id.
+12. Open **Workspace Packet**.
+13. Click **Generate Workspace Packet** and copy the `/goal` handoff.
+14. Open **Launch Assets**.
+15. Click **Generate GitHub Packet**.
+16. Open **Live Checks** and click **Run Checks**.
+17. Open **Vault Handoff**.
+18. Click **Commit Assets** and verify a `SESSION_...` id.
 
 ## API Surface
 
@@ -264,6 +270,7 @@ curl https://foundersignal-buildweek.vercel.app/api/eve-manifest
 | `GITHUB_INTEGRATION.md` | GitHub loop architecture |
 | `SYSTEM_ARCHITECTURE.md` | End-to-end system proof |
 | `SUBMISSION.md` | Devpost narrative and verification path |
+| `DEVPOST_COPY.md` | Short copy block for the official submission form |
 
 ## Security Guardrails
 

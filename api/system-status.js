@@ -4,6 +4,7 @@ const routes = [
   "/",
   "/builder.html",
   "/demo.html",
+  "/DEVPOST_COPY.md",
   "/report.html",
   "/brief.html",
   "/goal.html",
