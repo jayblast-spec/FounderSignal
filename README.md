@@ -22,7 +22,37 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
   <img alt="Gemini" src="https://img.shields.io/badge/Gemini-Research%20Surface-8E75B2?style=flat-square&logo=googlegemini&logoColor=white">
 </p>
 
+<p>
+  <img alt="Animated FounderSignal headline" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&duration=2600&pause=650&color=34D399&center=true&vCenter=true&width=760&lines=Founder+intent+%E2%86%92+Agent+confrontation;Correction+loop+%E2%86%92+Codex-ready+artifacts;Spec+%2B+Schema+%2B+Tasks+%2B+Manifest;GitHub+packet+%E2%86%92+Vault+handoff">
+</p>
+
 </div>
+
+## Visual Preview
+
+<table>
+  <tr>
+    <td width="33%">
+      <img src="docs/readme/slide-01-home.png" alt="FounderSignal live product homepage preview">
+      <br>
+      <sub><strong>01 / Live Product</strong> - command-layer landing experience</sub>
+    </td>
+    <td width="33%">
+      <img src="docs/readme/slide-02-brief.png" alt="FounderSignal Codex brief artifact viewer preview">
+      <br>
+      <sub><strong>02 / Codex Brief</strong> - spec, schema, tasks, manifest</sub>
+    </td>
+    <td width="33%">
+      <img src="docs/readme/slide-03-eve.png" alt="FounderSignal Vercel eve agent page preview">
+      <br>
+      <sub><strong>03 / eve Agent</strong> - tools, skills, schedules, subagents</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img alt="Flow animation" src="https://capsule-render.vercel.app/api?type=rect&height=70&color=0:09090B,45:101113,100:10B981&text=Agentic%20Workflow%20%7C%20Codex%20Compiler%20%7C%20Vault%20Handoff&fontColor=FAFAFA&fontSize=18&fontAlign=50&animation=fadeIn">
+</p>
 
 ## Live Links
 
