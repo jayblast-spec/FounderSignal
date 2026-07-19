@@ -1,9 +1,74 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>API Reference | FounderSignal</title><link rel="stylesheet" href="/platform.css"></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API Reference | FounderSignal</title>
+  <link rel="stylesheet" href="/platform.css">
+</head>
 <body>
-<header class="topbar"><a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a><nav class="nav"><a href="/products/validation-engine/">Products</a><a href="/documentation/">Documentation</a><a href="/pricing/">Pricing</a></nav><div class="nav-actions"><a class="ghost" href="/documentation/repository/">Repository Skill</a><a class="cta" href="/report.html">Launch Console</a></div></header>
-<main class="doc-layout"><aside class="sidebar"><a href="/documentation/">Quickstart</a><a href="/documentation/core-concepts/">Core Concepts</a></aside><article class="doc"><p class="eyebrow">API Reference</p><h1>Compiler endpoints.</h1><div class="playground"><div class="code-head"><span>POST /api/compile-brief</span><button data-copy="#api-ref">Copy</button></div><pre id="api-ref"><code>curl -X POST https://foundersignal-buildweek.vercel.app/api/compile-brief \
+  <header class="topbar">
+    <a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a>
+    <nav class="nav"><a href="/products/validation-engine/">Products</a><a href="/documentation/">Documentation</a><a href="/pricing/">Pricing</a><a href="/eve/">Eve Agent</a></nav>
+    <div class="nav-actions"><a class="ghost" href="/documentation/repository/">Repository Skill</a><a class="cta" href="/report.html">Launch Console</a></div>
+  </header>
+  <main class="doc-layout">
+    <aside class="sidebar">
+      <a href="/documentation/">Quickstart</a>
+      <a href="/documentation/repository/">Repository Skill</a>
+      <a href="/documentation/core-concepts/">Core Concepts</a>
+      <a href="/documentation/api-reference/">API Reference</a>
+      <a href="/goal.html">Live Checks</a>
+    </aside>
+    <article class="doc">
+      <p class="eyebrow">API Reference</p>
+      <h1>Compiler endpoints for the full agentic loop.</h1>
+      <p>FounderSignal exposes a small public API surface that proves the workflow is more than static text. The endpoints run agent confrontation, artifact compilation, correction refinement, GitHub packet generation, Vault handoff, eve manifest inspection, Cron verification, and system-status checks.</p>
+
+      <div class="api-grid">
+        <article><span>POST</span><b>/api/agent-confrontation</b><p>Runs VC, security, and growth specialist checks.</p></article>
+        <article><span>POST</span><b>/api/compile-brief</b><p>Returns `spec`, `schema`, `tasks`, and `manifest` artifacts.</p></article>
+        <article><span>POST</span><b>/api/refine-artifacts</b><p>Applies founder correction and returns updated artifacts.</p></article>
+        <article><span>POST</span><b>/api/github-loop</b><p>Creates a GitHub issue packet or issue when repo credentials are configured.</p></article>
+        <article><span>POST</span><b>/api/vault-commit</b><p>Returns a session id and SHA-256 content hash.</p></article>
+        <article><span>GET</span><b>/api/system-status</b><p>Verifies route, artifact, and Cron contracts.</p></article>
+      </div>
+
+      <h2>Compile Brief</h2>
+      <div class="playground">
+        <div class="code-head"><span>POST /api/compile-brief</span><button data-copy="#compile-api">Copy</button></div>
+        <pre id="compile-api"><code>curl -X POST https://foundersignal-buildweek.vercel.app/api/compile-brief \
   -H "Content-Type: application/json" \
-  -d '{"idea":"B2B AI workflow","customer":"founder-led teams","score":88}'</code></pre></div><h2>Correction</h2><p>Use <code>/api/refine-artifacts</code> to apply practitioner feedback and receive updated artifacts.</p><h2>Vault</h2><p>Use <code>/api/vault-commit</code> to create a handoff session.</p></article></main><script src="/platform.js"></script>
-</body></html>
+  -d '{"idea":"B2B AI workflow","customer":"founder-led teams","score":88}'</code></pre>
+      </div>
+
+      <h2>Correction Loop</h2>
+      <div class="playground">
+        <div class="code-head"><span>POST /api/refine-artifacts</span><button data-copy="#refine-api">Copy</button></div>
+        <pre id="refine-api"><code>curl -X POST https://foundersignal-buildweek.vercel.app/api/refine-artifacts \
+  -H "Content-Type: application/json" \
+  -d '{"idea":"B2B AI workflow","correction":"Must support tenant-level RLS","previous_response_id":"fs_live_demo"}'</code></pre>
+      </div>
+
+      <h2>Response Contract</h2>
+      <div class="playground">
+        <div class="code-head"><span>artifact payload</span><button data-copy="#payload-contract">Copy</button></div>
+        <pre id="payload-contract"><code>{
+  "ok": true,
+  "data": {
+    "artifacts": {
+      "spec": "string",
+      "schema": "string",
+      "tasks": "string",
+      "manifest": "string"
+    },
+    "previous_response_id": "string"
+  }
+}</code></pre>
+      </div>
+    </article>
+  </main>
+  <footer><span>FounderSignal by ArkNet Digital</span><a href="https://www.arknet.digital/vault.html" target="_blank" rel="noopener">Public Vault</a></footer>
+  <script src="/platform.js"></script>
+</body>
+</html>

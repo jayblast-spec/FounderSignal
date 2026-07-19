@@ -23,6 +23,10 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 </p>
 
 <p>
+  <img alt="FounderSignal Logo" src="docs/readme/foundersignal-logo.png" width="760">
+</p>
+
+<p>
   <img alt="Animated FounderSignal headline" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&duration=2600&pause=650&color=34D399&center=true&vCenter=true&width=760&lines=Founder+intent+%E2%86%92+Agent+confrontation;Correction+loop+%E2%86%92+Codex-ready+artifacts;Spec+%2B+Schema+%2B+Tasks+%2B+Manifest;GitHub+packet+%E2%86%92+Vault+handoff">
 </p>
 

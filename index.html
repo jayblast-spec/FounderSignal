@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FounderSignal | Idea-to-Execution Compiler</title>
   <meta name="description" content="Compile founder intent into Codex-ready specs, schemas, tasks, manifests, and Vault handoff packages.">
+  <meta property="og:image" content="https://foundersignal-buildweek.vercel.app/docs/readme/foundersignal-logo.png">
+  <meta name="twitter:image" content="https://foundersignal-buildweek.vercel.app/docs/readme/foundersignal-logo.png">
   <link rel="stylesheet" href="platform.css">
 </head>
 <body>
@@ -52,7 +54,12 @@
           <div><b data-status-count="cron">1/1</b><span>Daily agent check configured</span></div>
         </div>
       </div>
-      <div class="playground hero-terminal">
+      <div class="hero-right">
+        <a class="brand-poster" href="/report.html" aria-label="Open FounderSignal Agent Console">
+          <img src="/docs/readme/foundersignal-logo.png" alt="FounderSignal AI-powered intent compiler logo">
+          <span>Identity layer / Open Agent Console</span>
+        </a>
+        <div class="playground hero-terminal">
         <div class="code-head"><span><i></i><i></i><i></i> Pipeline Shell</span><button data-copy="#hero-code">Copy</button></div>
         <pre id="hero-code"><code><span class="code-comment">// Compile founder intent into a repo-ready packet</span>
 
@@ -67,6 +74,7 @@
   <span class="code-key">"runtime"</span>: <span class="code-string">"vercel-functions"</span>,
   <span class="code-key">"artifacts"</span>: [<span class="code-string">"spec.md"</span>, <span class="code-string">"schema.sql"</span>, <span class="code-string">"tasks.txt"</span>, <span class="code-string">"manifest.json"</span>]
 <span class="code-brace">}</span></code></pre>
+        </div>
       </div>
     </section>
 
