@@ -354,11 +354,33 @@ footer {
   text-transform: uppercase;
   letter-spacing: .16em;
 }
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-lockup img {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  padding: 8px;
+  object-fit: contain;
+}
+.brand-lockup-large img {
+  width: 58px;
+  height: 58px;
+  border-color: rgba(16,185,129,.36);
+  background: rgba(16,185,129,.09);
+  box-shadow: 0 0 34px rgba(16,185,129,.12);
+}
 .command-top h3 {
   margin: 18px 0 12px;
   font-size: clamp(36px, 5vw, 64px);
   line-height: .95;
 }
+.brand-lockup h3 { margin: 0; }
 .command-top p {
   color: var(--soft);
   font-size: 16px;
@@ -375,12 +397,23 @@ footer {
   padding: 18px;
 }
 .command-rail b {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 8px;
   color: var(--text);
   font: 900 13px ui-monospace, SFMono-Regular, Consolas, monospace;
   text-transform: uppercase;
   letter-spacing: .1em;
+}
+.command-rail b img {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px;
+  background: rgba(255,255,255,.055);
+  padding: 5px;
+  object-fit: contain;
 }
 .command-rail span {
   color: var(--muted);
