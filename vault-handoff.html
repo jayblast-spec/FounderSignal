@@ -17,7 +17,7 @@
       <p class="eyebrow">Vault Handoff</p>
       <h1>Commit the final execution packet.</h1>
       <p class="lead">Serialize founder intent, compiled artifacts, correction history, and session metadata into a Vault-ready handoff record.</p>
-      <div class="hero-actions"><button class="cta large" type="button">Commit Assets</button><button class="ghost large" type="button">Export Zip (Local)</button></div>
+      <div class="hero-actions"><button class="cta large" type="button">Commit Assets</button><button class="ghost large" type="button">Export Active File</button></div>
     </section>
     <section class="two-col">
       <section class="console"><div class="code-head"><div class="tabs"><button>SPEC.MD</button><button>SCHEMA.SQL</button><button>TASKS.TXT</button><button>MANIFEST.JSON</button></div><button data-copy="#artifact-code">Copy</button></div><div class="terminal-glow" id="artifact-code"></div></section>
@@ -27,8 +27,8 @@
         <div class="status-grid">
           <div class="status-card"><b>Files</b><span>4</span></div>
           <div class="status-card"><b>Schema</b><span>RLS</span></div>
-          <div class="status-card"><b>Hash</b><span>Pending</span></div>
-          <div class="status-card"><b>Vault</b><span>Ready</span></div>
+          <div class="status-card"><b>Hash</b><span data-vault-hash>Pending</span></div>
+          <div class="status-card"><b>Vault</b><span data-vault-session>Ready</span></div>
         </div>
         <p class="lead">This references the public ArkNet Digital Vault without writing into ArkNet Digital or ArkNet OS.</p>
       </aside>

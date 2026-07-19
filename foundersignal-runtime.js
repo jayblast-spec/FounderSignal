@@ -524,8 +524,14 @@
     terminal("SERIALIZING STATE... VALIDATING CONSTRAINTS...");
     const response = await fetch("/api/vault-commit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ state: state(), artifacts: currentArtifacts, source: "FounderSignal Build Week" }) });
     const data = await response.json();
+    const session = data.session_id || data.sessionId || "SESSION_READY";
+    const hash = data.content_hash || data.contentHash || "";
+    const sessionTarget = document.querySelector("[data-vault-session]");
+    const hashTarget = document.querySelector("[data-vault-hash]");
+    if (sessionTarget) sessionTarget.textContent = session;
+    if (hashTarget) hashTarget.textContent = hash ? `${hash.slice(0, 10)}...` : "Committed";
     terminal(`VAULT COMMIT ${data.session_id || data.sessionId || "SESSION_READY"}`);
-    toast(`[SUCCESS] Asset committed: ${data.session_id || data.sessionId || "SESSION_READY"}`);
+    toast(`[SUCCESS] Asset committed: ${session}`);
   }
 
   async function generateGithubPacket(trigger) {
@@ -611,7 +617,7 @@
     if (icon === "content_copy") {
       event.preventDefault(); event.stopImmediatePropagation(); copyArtifact(); return;
     }
-    if (icon === "download" || lower.includes("export zip")) {
+    if (icon === "download" || lower.includes("export zip") || lower.includes("export active file")) {
       event.preventDefault(); event.stopImmediatePropagation(); downloadArtifact(); return;
     }
     if (lower.includes("run agent demo")) {
