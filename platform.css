@@ -285,6 +285,46 @@ article p, .workflow p { color: var(--muted); line-height: 1.65; }
   transition: all .2s ease;
 }
 .steps a:hover, .steps button:hover { border-color: var(--accent); color: var(--accent-2); transform: translateY(-1px); }
+.steps a {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 4px 12px;
+  align-items: start;
+}
+.steps a small {
+  grid-column: 2;
+  color: #71717a;
+  font: 900 10px ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+.steps a b, .steps a em {
+  grid-column: 2;
+}
+.steps a em {
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.flow-icon, .cap-icon {
+  grid-row: 1 / span 3;
+  width: 40px;
+  height: 40px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(16,185,129,.34);
+  border-radius: 10px;
+  background: rgba(16,185,129,.08);
+  color: var(--accent-2);
+  font: 900 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+  box-shadow: 0 0 26px rgba(16,185,129,.08);
+}
+.logo-chip img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
 .scenario-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .comparison div { border: 1px solid var(--line); border-radius: 12px; background: #09090b; padding: 20px; }
@@ -336,6 +376,15 @@ footer {
 .capability-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 34px; }
 .capability-grid article { min-height: 230px; }
 .capability-grid h3 { font-size: 22px; margin: 18px 0 10px; }
+.cap-icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 8px;
+}
+.cap-icon.logo-chip img {
+  width: 27px;
+  height: 27px;
+}
 .codex-alpha { padding-bottom: 60px; }
 .codex-command {
   position: relative;
