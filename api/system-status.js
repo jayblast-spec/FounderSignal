@@ -2,13 +2,20 @@ const artifacts = ["spec.md", "schema.sql", "tasks.txt", "manifest.json"];
 
 const routes = [
   "/",
+  "/builder.html",
+  "/report.html",
+  "/brief.html",
+  "/goal.html",
+  "/assets.html",
+  "/vault-handoff.html",
   "/documentation/",
   "/documentation/repository/",
+  "/documentation/core-concepts/",
+  "/documentation/api-reference/",
   "/products/validation-engine/",
   "/products/codex-compiler/",
   "/pricing/",
   "/eve/",
-  "/api/eve-manifest",
 ];
 
 const apiRoutes = [
