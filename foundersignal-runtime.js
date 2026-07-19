@@ -350,6 +350,7 @@
   }
 
   async function compileArtifacts() {
+    setCompilerState("Compiling live artifacts...");
     terminal("COMPILING CODEX ARTIFACTS...");
     const response = await fetch("/api/compile-brief", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(state()) });
     const payload = await response.json();
@@ -362,6 +363,7 @@
     };
     save({ artifacts: currentArtifacts });
     renderArtifact(activeArtifact);
+    setCompilerState("Compile complete: artifacts ready");
     toast("Codex artifacts compiled");
   }
 
@@ -491,8 +493,10 @@
   }
 
   async function refine() {
-    const correction = prompt("Founder correction to apply:");
+    const input = document.querySelector("[data-correction-input]");
+    const correction = clean(input?.value) || prompt("Founder correction to apply:");
     if (!correction) return;
+    setCompilerState(`Applying correction: ${correction.slice(0, 68)}${correction.length > 68 ? "..." : ""}`);
     terminal("APPLYING CORRECTION + REGRESSION CHECK...");
     const response = await fetch("/api/refine-artifacts", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...state(), correction, corrections: [...(state().corrections || []), correction] }) });
     const payload = await response.json();
@@ -506,7 +510,14 @@
     };
     save({ artifacts: currentArtifacts, corrections: [...(state().corrections || []), correction], previous_response_id: data.previous_response_id || payload.previous_response_id });
     renderArtifact(activeArtifact);
+    setCompilerState("System updated: regression check passed");
+    if (input) input.value = "";
     toast("System updated: regression check passed");
+  }
+
+  function setCompilerState(message) {
+    const target = document.querySelector("[data-compiler-state]");
+    if (target) target.textContent = message;
   }
 
   async function commitVault() {

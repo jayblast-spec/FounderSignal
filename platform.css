@@ -1039,6 +1039,27 @@ input:focus, textarea:focus, select:focus { border-color: var(--accent); box-sha
 .status-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
 .status-card { border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.025); padding: 18px; }
 .status-card b { display: block; color: var(--accent-2); margin-bottom: 8px; }
+.compiler-panel {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(103,232,249,.24);
+  border-radius: 12px;
+  background:
+    radial-gradient(420px 160px at 100% 0%, rgba(103,232,249,.09), transparent 72%),
+    rgba(103,232,249,.035);
+  padding: 14px;
+  margin: 16px 0;
+}
+.compiler-panel span {
+  color: #67e8f9;
+  font: 900 10px ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.compiler-panel b {
+  color: var(--soft);
+  font: 900 13px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
 .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
 .tabs button {
   border: 1px solid var(--line);

@@ -23,7 +23,16 @@
         <p class="eyebrow">Artifact controls</p>
         <h2>Codex Brief</h2>
         <p class="lead">The compiler produces machine-readable implementation material from founder intent.</p>
-        <div class="button-row"><button class="cta large" type="button">Compile Live</button><button class="ghost large" type="button">Apply Correction</button></div>
+        <div class="compiler-panel">
+          <span>Compiler state</span>
+          <b data-compiler-state>Awaiting live compile</b>
+        </div>
+        <label>Founder correction<textarea data-correction-input placeholder="Example: Must support localized data isolation rules and explicit tenant RLS."></textarea></label>
+        <div class="button-row">
+          <button class="cta large" type="button">Compile Live</button>
+          <button class="ghost large" type="button">Apply Correction</button>
+          <button class="ghost large" type="button">Commit to Vault</button>
+        </div>
         <div class="status-grid">
           <div class="status-card"><b>RLS</b><span>Explicit</span></div>
           <div class="status-card"><b>Tasks</b><span>Atomic</span></div>
