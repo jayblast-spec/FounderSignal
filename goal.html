@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live Checks | FounderSignal</title>
+  <link rel="stylesheet" href="/platform.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a>
+    <nav class="nav"><a href="/products/validation-engine/">Product</a><a href="/documentation/">Docs</a><a href="/documentation/#api">API</a><a href="/pricing/">Pricing</a></nav>
+    <div class="nav-actions"><a class="ghost" href="/report.html">Agent Loop</a><a class="cta" href="/brief.html">Open Compiler</a></div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Live Checks</p>
+      <h1>Verify the workflow endpoints before submission.</h1>
+      <p class="lead">Run the public agent, goal, compiler, Vault, and cron endpoints from the same production deployment.</p>
+    </section>
+    <section class="surface">
+      <div class="button-row"><button class="cta large" type="button">Run Checks</button><a class="ghost large" href="/brief.html">Open Compiler</a></div>
+      <div class="status-grid">
+        <div class="status-card"><b>Agent</b><span>/api/agent-confrontation</span></div>
+        <div class="status-card"><b>Goal</b><span>/api/goal-execution</span></div>
+        <div class="status-card"><b>Compiler</b><span>/api/compile-brief</span></div>
+        <div class="status-card"><b>Vault</b><span>/api/vault-commit</span></div>
+      </div>
+      <section class="console" style="margin-top:18px"><div class="code-head"><span>Runtime Log</span><button>Run Checks</button></div><div class="terminal-glow"><p>&gt; Click Run Checks to test live functions.</p></div></section>
+    </section>
+  </main>
+  <footer><span>FounderSignal by ArkNet Digital</span><a href="https://www.arknet.digital/vault.html" target="_blank" rel="noopener">Public Vault</a></footer>
+  <script src="/foundersignal-runtime.js"></script>
+</body>
+</html>

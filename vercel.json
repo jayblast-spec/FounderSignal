@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/founder-signal-check",
+      "schedule": "0 9 * * *"
+    }
+  ]
+}

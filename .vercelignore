@@ -1,0 +1,4 @@
+*.png
+stitch-*.html
+workflow-smoke.spec.js
+click-flow.cjs

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eve Agent Runtime | FounderSignal</title>
+  <link rel="stylesheet" href="/platform.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a>
+    <nav class="nav"><a href="/products/validation-engine/">Products</a><a href="/documentation/">Documentation</a><a href="/pricing/">Pricing</a><a href="/eve/">Eve Agent</a></nav>
+    <div class="nav-actions"><a class="ghost" href="/documentation/">Sign In</a><a class="cta" href="/report.html">Launch Console</a></div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Vercel eve runtime shape</p>
+      <h1>An agent is a directory. FounderSignal ships that directory.</h1>
+      <p class="lead">This Build Week deployment includes an eve-style agent package: model config, instructions, typed tools, skills, GitHub channel, daily schedule, and specialist subagents.</p>
+      <div class="hero-actions"><a class="cta large" href="/api/eve-manifest">View JSON Manifest</a><a class="ghost large" href="/SYSTEM_ARCHITECTURE.md">Architecture File</a></div>
+    </section>
+    <section class="two-col">
+      <div class="surface">
+        <p class="section-label">Agent tree</p>
+        <ul class="check-list">
+          <li>eve-agent/agent.ts</li>
+          <li>eve-agent/instructions.md</li>
+          <li>eve-agent/tools/compile_intent.ts</li>
+          <li>eve-agent/tools/create_github_issue_packet.ts</li>
+          <li>eve-agent/tools/commit_vault_handoff.ts</li>
+          <li>eve-agent/skills/startup-validation.md</li>
+          <li>eve-agent/skills/supabase-rls.md</li>
+          <li>eve-agent/channels/github.ts</li>
+          <li>eve-agent/schedules/daily-signal-check.md</li>
+          <li>eve-agent/subagents/security-reviewer/</li>
+          <li>eve-agent/subagents/growth-operator/</li>
+        </ul>
+      </div>
+      <div class="console">
+        <div class="code-head"><span>Runtime proof</span><button data-copy="#eve-code">Copy</button></div>
+        <pre id="eve-code"><code>agent/
+  agent.ts
+  instructions.md
+  tools/
+    compile_intent.ts
+    create_github_issue_packet.ts
+    commit_vault_handoff.ts
+  skills/
+    startup-validation.md
+    supabase-rls.md
+  channels/
+    github.ts
+  schedules/
+    daily-signal-check.md
+  subagents/
+    security-reviewer/
+    growth-operator/</code></pre>
+      </div>
+    </section>
+  </main>
+  <footer><span>FounderSignal by ArkNet Digital</span><a href="https://www.arknet.digital/vault.html" target="_blank" rel="noopener">Public Vault</a></footer>
+  <script src="/platform.js"></script>
+</body>
+</html>

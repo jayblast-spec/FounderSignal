@@ -1,0 +1,26 @@
+name: FounderSignal Compile Packet
+description: Track a compiled FounderSignal execution packet.
+title: "[FounderSignal] "
+labels: ["founder-signal", "codex", "agentic-workflow"]
+body:
+  - type: textarea
+    id: intent
+    attributes:
+      label: Founder Intent
+      description: Paste the compiled founder intent.
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Artifacts
+      description: Link or paste spec.md, schema.sql, tasks.txt, and manifest.json.
+    validations:
+      required: true
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression Checks
+      description: List correction-derived checks.
+    validations:
+      required: true

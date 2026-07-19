@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FounderSignal | Idea-to-Execution Compiler</title>
+  <meta name="description" content="Compile founder intent into Codex-ready specs, schemas, tasks, manifests, and Vault handoff packages.">
+  <link rel="stylesheet" href="platform.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a>
+    <nav class="nav">
+      <a href="/products/validation-engine/">Products</a>
+      <a href="/documentation/">Documentation</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/eve/">Eve Agent</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="ghost" href="/documentation/repository/">Codex Skill</a>
+      <a class="cta" href="/report.html">Launch Console</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="release"><b>01 - Live compiler</b><span>The Build Week playground</span></p>
+        <h1>Compile raw intent into <span>execution-ready</span> systems.</h1>
+        <p class="lead">Test the compiler against a founder intent string. No signup. The live functions generate artifacts, run correction logic, expose a status contract, and package the result for Codex or Vault handoff.</p>
+        <ul class="check-list hero-checks">
+          <li>Regression checks across every correction</li>
+          <li>Output surfaces: Markdown, SQL, task checklist, JSON manifest</li>
+          <li>System status endpoint verifies artifact, route, and cron contracts</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="cta large" href="/report.html">Open Agent Console</a>
+          <a class="ghost large" href="/brief.html">Compile Brief</a>
+          <a class="ghost linklike large" href="#workflow">View Workflow -></a>
+        </div>
+        <div class="metric-row" id="system-metrics" aria-live="polite">
+          <div><b data-status-count="artifacts">4/4</b><span>Artifact types verified</span></div>
+          <div><b data-status-count="routes">8/8</b><span>Live routes healthy</span></div>
+          <div><b data-status-count="cron">1/1</b><span>Daily agent check configured</span></div>
+        </div>
+      </div>
+      <div class="playground hero-terminal">
+        <div class="code-head"><span><i></i><i></i><i></i> Pipeline Shell</span><button data-copy="#hero-code">Copy</button></div>
+        <pre id="hero-code"><code><span class="code-comment">// Compile founder intent into a repo-ready packet</span>
+
+<span class="code-prompt">$</span> <span class="code-command">curl</span> <span class="code-flag">-X</span> <span class="code-method">POST</span> <span class="code-url">https://foundersignal-buildweek.vercel.app/api/compile-brief</span> <span class="code-muted">\</span>
+  <span class="code-flag">-H</span> <span class="code-string">"Content-Type: application/json"</span> <span class="code-muted">\</span>
+  <span class="code-flag">-d</span> <span class="code-string">'{"idea":"B2B AI document summary engine","score":84}'</span>
+
+<span class="code-comment">// Response payload returns structured artifacts</span>
+
+<span class="code-brace">{</span>
+  <span class="code-key">"status"</span>: <span class="code-string">"compiled"</span>,
+  <span class="code-key">"runtime"</span>: <span class="code-string">"vercel-functions"</span>,
+  <span class="code-key">"artifacts"</span>: [<span class="code-string">"spec.md"</span>, <span class="code-string">"schema.sql"</span>, <span class="code-string">"tasks.txt"</span>, <span class="code-string">"manifest.json"</span>]
+<span class="code-brace">}</span></code></pre>
+      </div>
+    </section>
+
+    <section class="section two-col" id="playground">
+      <div>
+        <p class="section-label">02 - Core engine</p>
+        <h2>From console run to Codex packet.</h2>
+        <p class="lead">FounderSignal takes one raw founder goal through agent confrontation, Codex-ready architecture, correction loops, GitHub handoff, and Vault continuity. The output is not advice. It is the first execution packet.</p>
+        <ul class="check-list">
+          <li>Regression checks across every correction</li>
+          <li>Output surfaces: Markdown, SQL, task checklist, JSON manifest</li>
+          <li>System status endpoint verifies artifact, route, and cron contracts</li>
+        </ul>
+        <div class="button-row"><a class="cta large" href="/report.html">Open Agent Console</a><a class="ghost large" href="/brief.html">Compile Brief</a></div>
+      </div>
+      <div class="console">
+        <div class="code-head"><span>POST /api/compile-brief</span><span class="ok">200 OK</span></div>
+        <div class="terminal-glow">
+          <p>-&gt; intent: "marketplace for freelance video editors"</p>
+          <p>+ analyzing_domain</p>
+          <p>+ generating_schema</p>
+          <p>OK spec.md (4.2kb)</p>
+          <p>OK schema.sql (1.1kb)</p>
+          <p>OK tasks.txt (3.8kb)</p>
+          <p>OK manifest.json (1.4kb)</p>
+          <p>compilation complete - artifacts ready</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow" id="workflow">
+      <div>
+        <p class="eyebrow">Core workflow</p>
+        <h2>One founder intent becomes a Codex execution packet.</h2>
+        <p>Judges should not have to guess what this does. FounderSignal has one main job: compile founder thinking into structured development materials that a repo-level agent can act on.</p>
+      </div>
+      <div class="steps scenario-steps">
+        <a href="/report.html"><span>01</span><b>Agent Confrontation</b><em>VC, security, and growth pressure-test the idea.</em></a>
+        <a href="/brief.html"><span>02</span><b>Codex Brief</b><em>Compile spec, schema, tasks, and manifest.</em></a>
+        <a href="/brief.html"><span>03</span><b>Correction Loop</b><em>Apply founder feedback as a regression check.</em></a>
+        <a href="/documentation/repository/"><span>04</span><b>Reusable Skill</b><em>Carry the workflow into Codex or eve.</em></a>
+        <a href="/eve/"><span>05</span><b>eve Agent Shape</b><em>Tools, skills, schedules, channels, subagents.</em></a>
+        <a href="/vault-handoff.html"><span>06</span><b>Vault Handoff</b><em>Package the corrected artifact state for continuity.</em></a>
+      </div>
+    </section>
+
+    <section class="provider-strip">
+      <span>Execution surfaces</span>
+      <b>Vercel</b><b>eve</b><b>Supabase</b><b>GitHub</b><b>OpenAI</b><b>Vault</b>
+    </section>
+
+    <section class="section">
+      <p class="section-label">03 - Capabilities</p>
+      <h2>Not autocomplete. Autonomous system engineering.</h2>
+      <p class="lead">While IDE assistants suggest snippets, FounderSignal architects, validates, corrects, and packages entire founder workflows.</p>
+      <div class="capability-grid">
+        <article><span class="icon">01</span><h3>Validation Engine</h3><p>Agentic regression framework that verifies generated artifacts against the founder intent contract before handoff.</p></article>
+        <article><span class="icon">02</span><h3>Codex Compiler</h3><p>Blueprint compilation for Codex: markdown specs, Supabase migrations, task lists, and reusable skill manifests.</p></article>
+        <article><span class="icon">03</span><h3>Recursive Repair</h3><p>Founder corrections mutate the artifact set in place and produce a regression message instead of a new loose answer.</p></article>
+        <article><span class="icon">04</span><h3>GitHub Loop</h3><p>Outputs implementation issue packets so the result can enter a real engineering queue.</p></article>
+        <article><span class="icon">05</span><h3>Supabase-safe</h3><p>Generated schema targets PostgreSQL primitives and explicit row-level security policies.</p></article>
+        <article><span class="icon">06</span><h3>Vercel eve Agent</h3><p>Ships an agent directory with tools, skills, schedules, GitHub channel, and delegated subagents.</p></article>
+      </div>
+    </section>
+
+    <section class="section codex-alpha">
+      <p class="section-label">04 - The Codex Alpha</p>
+      <h2>Assistants suggest. FounderSignal compiles.</h2>
+      <div class="alpha-table">
+        <div><b>Feature</b><b>Copilot / Cursor</b><b>FounderSignal</b></div>
+        <div><span>Primary mode</span><span>Autocomplete and chat</span><span>System orchestration and handoff</span></div>
+        <div><span>Logic layer</span><span>IDE-dependent</span><span>Cloud-agnostic, API-first</span></div>
+        <div><span>Capability</span><span>Snippets</span><span>Execution packets</span></div>
+        <div><span>Integration</span><span>Manual setup</span><span>Codex, eve, GitHub, Vault</span></div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <h2>Move from AI-assisted coding to autonomous system engineering.</h2>
+      <p>Run the agent loop, apply one correction, inspect the generated artifacts, then hand the packet to Codex or the Vault continuity layer.</p>
+      <div class="hero-actions"><a class="cta large" href="/report.html">Run Agent Loop</a><a class="ghost large" href="/documentation/repository/">Use as Codex Skill</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a><p>Compile raw intent into execution-ready systems.</p></div>
+    <div><b>Product</b><a href="/products/validation-engine/">Validation Engine</a><a href="/products/codex-compiler/">Codex Compiler</a><a href="/pricing/">Pricing</a></div>
+    <div><b>Resources</b><a href="/documentation/">Documentation</a><a href="/documentation/core-concepts/">Core Concepts</a><a href="/documentation/api-reference/">API Reference</a><a href="/eve/">Eve Agent</a></div>
+    <div><b>Workflow</b><a href="/report.html">Agent Loop</a><a href="/brief.html">Codex Brief</a><a href="/vault-handoff.html">Vault Handoff</a></div>
+  </footer>
+  <div class="copyright">(c) 2026 FounderSignal Labs. All rights reserved. <span>v1.6.1 - workflow-core</span></div>
+  <script src="platform.js"></script>
+  <script src="foundersignal-runtime.js"></script>
+</body>
+</html>

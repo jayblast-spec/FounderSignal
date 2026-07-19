@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repository Skill | FounderSignal</title>
+  <link rel="stylesheet" href="/platform.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a>
+    <nav class="nav"><a href="/products/validation-engine/">Product</a><a href="/documentation/">Docs</a><a href="/documentation/api-reference/">API</a><a href="/pricing/">Pricing</a><a href="/eve/">Eve Agent</a></nav>
+    <div class="nav-actions"><a class="ghost" href="/documentation/">Sign In</a><a class="cta" href="/report.html">Get Started</a></div>
+  </header>
+
+  <main class="doc-layout">
+    <aside class="sidebar">
+      <a href="/documentation/">Quickstart</a>
+      <a href="/documentation/repository/">Repository Skill</a>
+      <a href="/documentation/core-concepts/">Core Concepts</a>
+      <a href="/documentation/api-reference/">API Reference</a>
+      <a href="/eve/">Eve Agent</a>
+    </aside>
+
+    <article class="doc">
+      <p class="eyebrow">Repository Skill</p>
+      <h1>Use FounderSignal as a Codex Skill.</h1>
+      <p>FounderSignal is packaged so a judge or developer can use it as a reusable Codex workflow, not only as a hosted demo. The live app generates the artifacts; the repository explains how to carry those artifacts into a repo-level agent loop.</p>
+
+      <h2>Clone-and-run path</h2>
+      <ol>
+        <li>Use <code>AGENTS.md</code> as the Codex operating contract.</li>
+        <li>Use <code>eve-agent/skills/startup-validation.md</code> for founder validation.</li>
+        <li>Use <code>eve-agent/skills/supabase-rls.md</code> for database and RLS generation.</li>
+        <li>Use <code>eve-agent/tools/compile_intent.ts</code> as the compile tool boundary.</li>
+        <li>Copy the generated <code>manifest.json</code> tab from the live compiler into a Codex-ready project.</li>
+      </ol>
+
+      <h2>Skill invocation contract</h2>
+      <div class="playground">
+        <div class="code-head"><span>FounderSignal_Bootstrap</span><button data-copy="#skill-contract">Copy</button></div>
+        <pre id="skill-contract"><code>{
+  "founder_intent": "B2B AI document summarizer for law firms",
+  "agent_validation_score": 84,
+  "critical_risks": ["data privacy", "multi-tenant isolation", "workflow adoption"],
+  "founder_corrections": ["Must support firm-level data isolation"],
+  "outputs": ["spec.md", "schema.sql", "tasks.txt", "manifest.json"]
+}</code></pre>
+      </div>
+
+      <h2>Vercel eve agent shape</h2>
+      <p>The repository includes an eve-style durable agent directory with <code>agent.ts</code>, <code>instructions.md</code>, reusable <code>tools/</code>, reusable <code>skills/</code>, GitHub <code>channels/</code>, scheduled checks, and delegated subagents.</p>
+      <div class="playground">
+        <div class="code-head"><span>eve-agent tree</span><button data-copy="#eve-tree">Copy</button></div>
+        <pre id="eve-tree"><code>eve-agent/
+  agent.ts
+  instructions.md
+  tools/
+  skills/
+  channels/
+  schedules/
+  subagents/</code></pre>
+      </div>
+
+      <h2>API proof</h2>
+      <p>The public manifest endpoint exposes the active agent contract.</p>
+      <div class="playground">
+        <div class="code-head"><span>GET /api/eve-manifest</span><button data-copy="#manifest-call">Copy</button></div>
+        <pre id="manifest-call"><code>curl https://foundersignal-buildweek.vercel.app/api/eve-manifest</code></pre>
+      </div>
+
+      <h2>Guardrails</h2>
+      <p>FounderSignal emits Supabase PostgreSQL primitives with explicit RLS policies, avoids unverified scale claims, and keeps ArkNet Digital Vault as a public handoff reference. This standalone Build Week project does not write into ArkNet OS or the arknet.digital project.</p>
+    </article>
+  </main>
+
+  <footer><span>FounderSignal by ArkNet Digital</span><a href="https://www.arknet.digital/vault.html" target="_blank" rel="noopener">Public Vault</a></footer>
+  <script src="/platform.js"></script>
+</body>
+</html>

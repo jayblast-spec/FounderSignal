@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation | FounderSignal</title>
+  <link rel="stylesheet" href="/platform.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a>
+    <nav class="nav"><a href="/products/validation-engine/">Product</a><a href="/documentation/">Docs</a><a href="/documentation/#api">API</a><a href="/pricing/">Pricing</a><a href="/eve/">Eve Agent</a></nav>
+    <div class="nav-actions"><a class="ghost" href="/brief.html">Sign In</a><a class="cta" href="/report.html">Get Started</a></div>
+  </header>
+  <main class="doc-layout">
+    <aside class="sidebar"><a href="#quickstart">Quickstart</a><a href="/documentation/repository/">Repository Skill</a><a href="#api">API</a><a href="#architecture">Architecture</a><a href="#corrections">Correction Loop</a><a href="#vault">Vault Handoff</a></aside>
+    <article class="doc">
+      <p class="eyebrow">Documentation</p>
+      <h1>FounderSignal Quickstart</h1>
+      <p>FounderSignal converts founder intent into a repeatable execution packet. Start by sending the idea, target customer, validation score, known risks, and any founder corrections to the compiler endpoint. The compiler returns four artifacts: <strong>spec.md</strong> for product requirements, <strong>schema.sql</strong> for Supabase PostgreSQL with RLS, <strong>tasks.txt</strong> for a Codex goal loop, and <strong>manifest.json</strong> for reusable workflow packaging.</p>
+      <p>The recommended flow is simple. First, run the Agent Loop to capture the founder hypothesis and pressure-test it through market, technical, and growth lenses. Next, open the Codex Brief and compile the artifact set. If the founder disagrees with any assumption, apply a correction. FounderSignal treats that correction as a regression check, not a note. The output is recompiled so the new constraint appears across the spec, schema, task list, and manifest.</p>
+      <p>After artifacts are ready, use the Vault Handoff route to create a session commit. The public Build Week version uses deterministic fallbacks where private model keys are unavailable, but the contract is production-oriented: API routes are typed by behavior, Supabase policies are explicit, and artifacts are machine-readable enough for Codex or another AI IDE to continue the work.</p>
+      <h2 id="api">API</h2>
+      <div class="playground"><div class="code-head"><span>compile-brief</span><button data-copy="#api-code">Copy</button></div><pre id="api-code"><code>curl -X POST https://foundersignal-buildweek.vercel.app/api/compile-brief \
+  -H "Content-Type: application/json" \
+  -d '{"idea":"AI workflow","customer":"B2B founders","score":88}'</code></pre></div>
+      <h2 id="corrections">Correction Loop</h2>
+      <p>Use <code>/api/refine-artifacts</code> when a practitioner adds a constraint. The response includes updated artifacts and a previous response identifier for state continuity.</p>
+      <h2 id="architecture">System Architecture</h2>
+      <p>FounderSignal is Codex-first. The platform treats OpenAI Codex as the execution reasoning layer, not a typing assistant. Founder input is normalized, scored, challenged by specialist agents, compiled into artifacts, refined through correction loops, and committed through the Vault handoff. The architecture is documented in <a href="/SYSTEM_ARCHITECTURE.md">SYSTEM_ARCHITECTURE.md</a>.</p>
+      <p>The repository also includes a Vercel eve-style agent directory at <code>eve-agent/</code>, plus a public manifest at <a href="/api/eve-manifest">/api/eve-manifest</a>. It demonstrates the production agent shape: <code>agent.ts</code>, <code>instructions.md</code>, <code>tools/</code>, <code>skills/</code>, <code>channels/</code>, <code>schedules/</code>, and <code>subagents/</code>.</p>
+      <p>Public demo metrics intentionally avoid unverified scale claims. The live proof focuses on verifiable artifacts, deployed routes, Vercel Cron, API responses, and the agent directory contract.</p>
+      <h2 id="vault">Vault Handoff</h2>
+      <p>Use <code>/api/vault-commit</code> to serialize the session into a commit record with a session id and content hash.</p>
+    </article>
+  </main>
+  <footer><span>FounderSignal by ArkNet Digital</span><a href="https://www.arknet.digital/vault.html" target="_blank" rel="noopener">Public Vault</a></footer>
+  <script src="/platform.js"></script>
+</body>
+</html>
