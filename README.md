@@ -76,6 +76,7 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 | Surface | URL | Purpose |
 |---|---|---|
 | Live product | https://foundersignal-buildweek.vercel.app/ | Public Build Week experience |
+| 90 Sec Demo | https://foundersignal-buildweek.vercel.app/demo.html | Guided judge walkthrough |
 | Agent Console | https://foundersignal-buildweek.vercel.app/report.html | Run VC, security, and growth confrontation |
 | Codex Brief | https://foundersignal-buildweek.vercel.app/brief.html | Compile `spec.md`, `schema.sql`, `tasks.txt`, `manifest.json` |
 | Launch Assets | https://foundersignal-buildweek.vercel.app/assets.html | Generate GitHub implementation packets |

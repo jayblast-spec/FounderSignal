@@ -3,6 +3,7 @@ const artifacts = ["spec.md", "schema.sql", "tasks.txt", "manifest.json"];
 const routes = [
   "/",
   "/builder.html",
+  "/demo.html",
   "/report.html",
   "/brief.html",
   "/goal.html",
