@@ -528,6 +528,41 @@
     toast(`[SUCCESS] Asset committed: ${data.session_id || data.sessionId || "SESSION_READY"}`);
   }
 
+  async function generateGithubPacket(trigger) {
+    const originalText = trigger?.textContent;
+    if (trigger) {
+      trigger.disabled = true;
+      trigger.textContent = "Generating...";
+    }
+    clearTerminal();
+    terminal("BUILDING GITHUB ISSUE PACKET...");
+    const response = await fetch("/api/github-loop", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(state()),
+    });
+    const payload = await response.json();
+    const issue = payload.issue || payload;
+    const target = primaryTerminal();
+    if (target) {
+      target.innerHTML = `
+        <div class="packet-card">
+          <span>GitHub loop packet</span>
+          <strong>${escapeHtml(issue.title || "FounderSignal execution packet")}</strong>
+          <pre>${escapeHtml(issue.body || JSON.stringify(payload, null, 2))}</pre>
+        </div>
+      `;
+    }
+    toast("GitHub packet generated for Codex handoff");
+    if (trigger) {
+      trigger.textContent = "Packet Ready";
+      setTimeout(() => {
+        trigger.disabled = false;
+        trigger.textContent = originalText || "Generate GitHub Packet";
+      }, 1500);
+    }
+  }
+
   function copyArtifact() {
     navigator.clipboard.writeText(currentArtifacts[activeArtifact] || "").then(() => toast(`${activeArtifact.toUpperCase()} copied for Codex`));
   }
@@ -603,6 +638,9 @@
     }
     if (lower.includes("check live functions") || lower.includes("run checks")) {
       event.preventDefault(); event.stopImmediatePropagation(); await runChecks(); return;
+    }
+    if (lower.includes("generate github packet") || lower.includes("issue packet")) {
+      event.preventDefault(); event.stopImmediatePropagation(); await generateGithubPacket(button); return;
     }
     if (lower.includes("open compiler") || lower.includes("compile live")) {
       event.preventDefault(); event.stopImmediatePropagation(); save(collectFormState()); if (location.pathname.endsWith("/brief.html")) await compileArtifacts(); else route("brief.html"); return;

@@ -486,6 +486,58 @@ footer {
 .capability-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 34px; }
 .capability-grid article { min-height: 230px; }
 .capability-grid h3 { font-size: 22px; margin: 18px 0 10px; }
+.launch-stack {
+  display: grid;
+  gap: 12px;
+}
+.launch-stack article {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 4px 14px;
+  align-items: start;
+  border-radius: 12px;
+  padding: 18px;
+}
+.launch-stack .cap-icon {
+  grid-row: 1 / span 2;
+  margin-bottom: 0;
+}
+.launch-stack h2 {
+  margin: 0;
+  font-size: 22px;
+}
+.launch-stack p {
+  margin: 0;
+}
+.packet-card {
+  border: 1px solid rgba(16,185,129,.34);
+  border-radius: 14px;
+  background:
+    radial-gradient(520px 220px at 100% 0%, rgba(16,185,129,.1), transparent 70%),
+    rgba(9,9,11,.96);
+  padding: 16px;
+}
+.packet-card span {
+  color: var(--accent-2);
+  font: 900 10px ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.packet-card strong {
+  display: block;
+  margin: 8px 0 14px;
+  color: var(--text);
+  font: 900 18px/1.25 Inter, ui-sans-serif, system-ui, sans-serif;
+}
+.packet-card pre {
+  min-height: 0;
+  max-height: 430px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #050506;
+  padding: 16px;
+  white-space: pre-wrap;
+}
 .cap-icon {
   width: 46px;
   height: 46px;
