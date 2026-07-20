@@ -129,7 +129,7 @@ FounderSignal positions Codex as the orchestration layer and treats other engine
 
 No unsupported benchmark claims are made. The point is architecture: other engines can assist; Codex receives the corrected implementation packet.
 
-## Build Week Workflow
+## Workflow
 
 | Step | Icon | Route | Output |
 |---:|---|---|---|
@@ -164,7 +164,7 @@ No unsupported benchmark claims are made. The point is architecture: other engin
 | GitHub issue packet | JSON/Markdown | Issue title, labels, body, checklist |
 | Vault package | Markdown + hash | Corrected session handoff for ArkNet Digital Vault reference |
 
-## Judge Walkthrough
+## Walkthrough
 
 Use this sequence to verify the full loop:
 
@@ -320,7 +320,7 @@ SYSTEM_ARCHITECTURE.md             Technical architecture proof
 SUBMISSION.md                      Devpost narrative and judge walkthrough
 ```
 
-## Build Week Position
+## Position
 
 FounderSignal compresses the idea-to-execution gap. It lets a founder describe a business system once, then produces the materials a developer or Codex agent needs to begin implementation with clear constraints, database security, task order, and correction history.
 
