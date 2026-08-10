@@ -7,9 +7,9 @@
 FounderSignal turns raw founder intent into Codex-ready execution packets: agent confrontation, corrected specs, Supabase RLS schemas, task lists, reusable manifests, GitHub packets, eve agent files, and Vault handoff packages.
 
 <p>
-  <a href="https://foundersignal-buildweek.vercel.app/"><img alt="Live Demo" src="https://img.shields.io/badge/Live-Demo-10B981?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://foundersignal-buildweek.vercel.app/"><img alt="Live Demo" src="https://img.shields.io/badge/Live-Demo-1D4ED8?style=for-the-badge&logo=vercel&logoColor=white"></a>
   <a href="https://github.com/jayblast-spec/FounderSignal"><img alt="GitHub Repo" src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="https://foundersignal-buildweek.vercel.app/api/system-status"><img alt="System Status" src="https://img.shields.io/badge/System-Verified-67E8F9?style=for-the-badge&logo=checkmarx&logoColor=black"></a>
+  <a href="https://foundersignal-buildweek.vercel.app/api/system-status"><img alt="System Status" src="https://img.shields.io/badge/System-Verified-38BDF8?style=for-the-badge&logo=checkmarx&logoColor=black"></a>
 </p>
 
 <p>
@@ -31,7 +31,7 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 </p>
 
 <p>
-  <img alt="Animated FounderSignal headline" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&duration=2600&pause=650&color=34D399&center=true&vCenter=true&width=760&lines=Founder+intent+%E2%86%92+Agent+confrontation;Correction+loop+%E2%86%92+Codex-ready+artifacts;Spec+%2B+Schema+%2B+Tasks+%2B+Manifest;GitHub+packet+%E2%86%92+Vault+handoff">
+  <img alt="Animated FounderSignal headline" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&duration=2600&pause=650&color=1D4ED8&center=true&vCenter=true&width=760&lines=Founder+intent+%E2%86%92+Agent+confrontation;Correction+loop+%E2%86%92+Codex-ready+artifacts;Spec+%2B+Schema+%2B+Tasks+%2B+Manifest;GitHub+packet+%E2%86%92+Vault+handoff">
 </p>
 
 </div>
@@ -59,7 +59,7 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 </table>
 
 <p align="center">
-  <img alt="Flow animation" src="https://capsule-render.vercel.app/api?type=rect&height=70&color=0:09090B,45:101113,100:10B981&text=Agentic%20Workflow%20%7C%20Codex%20Compiler%20%7C%20Vault%20Handoff&fontColor=FAFAFA&fontSize=18&fontAlign=50&animation=fadeIn">
+  <img alt="Flow animation" src="https://capsule-render.vercel.app/api?type=rect&height=70&color=0:1D4ED8,55:0B1E3D,100:020617&text=Agentic%20Workflow%20%7C%20Codex%20Compiler%20%7C%20Vault%20Handoff&fontColor=FAFAFA&fontSize=18&fontAlign=50&animation=fadeIn">
 </p>
 
 ## Brand Heroes
@@ -325,3 +325,7 @@ SUBMISSION.md                      Devpost narrative and judge walkthrough
 FounderSignal compresses the idea-to-execution gap. It lets a founder describe a business system once, then produces the materials a developer or Codex agent needs to begin implementation with clear constraints, database security, task order, and correction history.
 
 The project demonstrates useful intelligence by turning uncertainty into finished materials.
+
+<p align="center">
+  <img alt="ArkNet Digital footer" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:1D4ED8,55:0B1E3D,100:020617&section=footer&text=ArkNet%20Digital&fontColor=FFFFFF&fontSize=24&fontAlign=50&fontAlignY=65&desc=michael@arknet.digital&descAlign=50&descAlignY=85">
+</p>
