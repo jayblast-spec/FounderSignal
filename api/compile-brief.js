@@ -160,6 +160,8 @@ create policy "corrections_delete_own" on public.founder_signal_corrections for 
   return { spec, schema, tasks, manifest, mode: "deterministic" };
 }
 
+import { completeWithFallback } from "../lib/ai-fallback.js";
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     res.status(405).json({ success: false, error: "Method not allowed" });
@@ -167,46 +169,17 @@ export default async function handler(req, res) {
   }
 
   const input = req.body || {};
-  const apiKey = process.env.GROQ_API_KEY;
-
-  if (!apiKey) {
-    res.status(200).json({ success: true, data: fallbackArtifacts(input) });
-    return;
-  }
 
   try {
-    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
-        response_format: { type: "json_object" },
-        temperature: 0.1,
-        max_tokens: 2200,
-        messages: [
-          { role: "system", content: compilerPrompt },
-          { role: "user", content: JSON.stringify(input) },
-        ],
-      }),
-    });
-
-    if (!response.ok) {
-      res.status(200).json({ success: true, data: fallbackArtifacts(input), fallback_reason: `Groq returned ${response.status}` });
-      return;
-    }
-
-    const payload = await response.json();
-    const content = payload.choices?.[0]?.message?.content || "{}";
-    const data = JSON.parse(content);
+    const { content } = await completeWithFallback(compilerPrompt, JSON.stringify(input), { temperature: 0.1, maxTokens: 2200 });
+    const data = JSON.parse(content || "{}");
     if (!isCompliant(data)) {
       res.status(200).json({ success: true, data: fallbackArtifacts(input), fallback_reason: "model output failed Supabase/RLS contract" });
       return;
     }
     res.status(200).json({ success: true, data: { spec: data.spec, schema: data.schema, tasks: data.tasks, manifest: data.manifest, mode: "model" } });
   } catch (error) {
+    console.error("compile-brief failed:", error.message || error);
     res.status(200).json({ success: true, data: fallbackArtifacts(input), fallback_reason: error.message || "compile failed" });
   }
 }
