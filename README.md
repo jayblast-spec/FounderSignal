@@ -272,6 +272,16 @@ curl https://foundersignal-buildweek.vercel.app/api/eve-manifest
 | `SUBMISSION.md` | Devpost narrative and verification path |
 | `DEVPOST_COPY.md` | Short copy block for the official submission form |
 
+## Engineering Notes
+
+**The real problem:** a founder's first idea-to-spec pass is usually optimistic — the interesting work isn't generating a brief, it's forcing a correction pass that survives contact with a skeptical read before it becomes an implementation packet.
+
+**The approach:** `api/agent-confrontation.js` calls Groq to red-team the idea against named specialist lenses before `api/compile-brief.js` produces the Codex-ready spec — the confrontation step runs first, on purpose, so the brief downstream is built from the corrected version, not the first draft.
+
+**One real number:** when `GROQ_API_KEY` isn't configured, the confrontation endpoint returns a real `501` with an explicit "not configured" message rather than silently returning a fake result — it fails loud, not quiet.
+
+**Not handled yet:** Supabase persistence is scaffolded (RLS-enabled schema is generated) but described as "future persistence" in this repo's own docs — treat the current flow as artifact generation, not yet a system of record.
+
 ## Security Guardrails
 
 - Generated database artifacts target Supabase PostgreSQL primitives.
