@@ -10,12 +10,13 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/docs/readme/foundersignal-icon.png">
   <link rel="stylesheet" href="platform.css">
+  <link rel="stylesheet" href="onboarding-tour.css">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="/"><span class="logo">FS</span><span>FounderSignal</span></a>
     <nav class="nav platform-nav" aria-label="Primary navigation">
-      <div class="nav-item">
+      <div class="nav-item" data-tour="products-nav">
         <button class="mega-trigger" type="button">Products</button>
         <div class="mega-panel" role="menu">
           <div class="mega-grid">
@@ -74,6 +75,7 @@
       <a href="/eve/">Eve Agent</a>
     </nav>
     <div class="nav-actions">
+      <button type="button" class="fs-tour-replay" data-tour-replay>Replay tour</button>
       <a class="ghost" href="/documentation/repository/">Codex Skill</a>
       <a class="cta" href="/demo.html">90 Sec Demo</a>
     </div>
@@ -90,7 +92,7 @@
           <li>Output surfaces: Markdown, SQL, task checklist, JSON manifest</li>
           <li>System status endpoint verifies artifact, route, and cron contracts</li>
         </ul>
-        <div class="hero-actions">
+        <div class="hero-actions" data-tour="cta">
           <a class="cta large" href="/report.html">Open Agent Console</a>
           <a class="ghost large" href="/demo.html">90 Sec Demo</a>
           <a class="ghost large" href="/brief.html">Compile Brief</a>
@@ -111,7 +113,7 @@
         </div>
       </div>
       <div class="hero-right">
-        <div class="hero-cockpit" aria-label="FounderSignal live compiler cockpit">
+        <div class="hero-cockpit" aria-label="FounderSignal live compiler cockpit" data-tour="cockpit">
           <div class="cockpit-top">
             <div class="mini-brand"><span class="logo">FS</span><b>FounderSignal Compiler</b></div>
             <span class="live-pill"><i></i> Runtime armed</span>
@@ -157,7 +159,7 @@ alter table public.founder_signal_runs
       </div>
     </section>
 
-    <section class="judge-strip" aria-label="FounderSignal judge walkthrough">
+    <section class="judge-strip" aria-label="FounderSignal judge walkthrough" data-tour="judge-strip">
       <a href="/demo.html"><span>Judge path</span><b>90-second verification run</b><em>Agent -> Brief -> Correction -> Workspace -> Checks -> Vault</em></a>
       <a href="/workspace.html"><span>Dev handoff</span><b>Workspace Packet</b><em>/goal, guardrails, file targets, acceptance checks</em></a>
       <a href="/goal.html"><span>Live proof</span><b>25 routes / 9 APIs / 1 cron</b><em>Verified deployment contract, not usage claims</em></a>
@@ -304,5 +306,6 @@ alter table public.founder_signal_runs
   <div class="copyright">(c) 2026 FounderSignal Labs. All rights reserved. <span>v1.6.1 - workflow-core</span></div>
   <script src="platform.js"></script>
   <script src="foundersignal-runtime.js"></script>
+  <script src="onboarding-tour.js"></script>
 </body>
 </html>
