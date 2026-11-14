@@ -339,3 +339,7 @@ The project demonstrates useful intelligence by turning uncertainty into finishe
 <p align="center">
   <img alt="ArkNet Digital footer" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:1D4ED8,55:0B1E3D,100:020617&section=footer&text=ArkNet%20Digital&fontColor=FFFFFF&fontSize=24&fontAlign=50&fontAlignY=65&desc=michael@arknet.digital&descAlign=50&descAlignY=85">
 </p>
+
+## Acquire FounderSignal
+
+This codebase is for sale as-is, with a written license and IP assignment at close: https://veroputech.gumroad.com/l/foundersignal
