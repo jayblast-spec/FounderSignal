@@ -7,9 +7,7 @@
 FounderSignal turns raw founder intent into Codex-ready execution packets: agent confrontation, corrected specs, Supabase RLS schemas, task lists, reusable manifests, GitHub packets, eve agent files, and Vault handoff packages.
 
 <p>
-  <a href="https://foundersignal-buildweek.vercel.app/"><img alt="Live Demo" src="https://img.shields.io/badge/Live-Demo-1D4ED8?style=for-the-badge&logo=vercel&logoColor=white"></a>
   <a href="https://github.com/jayblast-spec/FounderSignal"><img alt="GitHub Repo" src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="https://foundersignal-buildweek.vercel.app/api/system-status"><img alt="System Status" src="https://img.shields.io/badge/System-Verified-38BDF8?style=for-the-badge&logo=checkmarx&logoColor=black"></a>
 </p>
 
 <p>
@@ -35,6 +33,16 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
 </p>
 
 </div>
+
+## What I built
+
+I built FounderSignal as a static web front end (HTML, CSS and JavaScript pages in the repo root) backed by Vercel serverless functions in `api/`:
+
+- endpoints for agent confrontation, brief compilation, artifact refinement, goal execution, the GitHub loop, workspace packets, Vault commits, the eve manifest and system status;
+- a scheduled cron job (`api/cron`) and an AI-provider fallback layer (`lib/ai-fallback.js`);
+- the product, resource and documentation pages, and the eve agent definition (`eve`, `eve-agent`).
+
+It was first built during a build-week hackathon.
 
 ## Visual Preview
 
@@ -71,29 +79,9 @@ FounderSignal turns raw founder intent into Codex-ready execution packets: agent
   </tr>
 </table>
 
-## Live Links
+## Live demo
 
-| Surface | URL | Purpose |
-|---|---|---|
-| Live product | https://foundersignal-buildweek.vercel.app/ | Public Build Week experience |
-| 90 Sec Demo | https://foundersignal-buildweek.vercel.app/demo.html | Guided judge walkthrough |
-| Devpost Copy | https://foundersignal-buildweek.vercel.app/DEVPOST_COPY.md | Short submission-ready copy block |
-| Agent Console | https://foundersignal-buildweek.vercel.app/report.html | Run VC, security, and growth confrontation |
-| Codex Brief | https://foundersignal-buildweek.vercel.app/brief.html | Compile `spec.md`, `schema.sql`, `tasks.txt`, `manifest.json` |
-| Launch Assets | https://foundersignal-buildweek.vercel.app/assets.html | Generate GitHub implementation packets |
-| Product: Agent Console | https://foundersignal-buildweek.vercel.app/products/agent-console/ | Product page for the confrontation surface |
-| Product: GitHub Loop | https://foundersignal-buildweek.vercel.app/products/github-loop/ | Product page for implementation issue packets |
-| Product: Vault Continuity | https://foundersignal-buildweek.vercel.app/products/vault-continuity/ | Product page for session handoff |
-| Builder Proof | https://foundersignal-buildweek.vercel.app/builder.html | Inspect the live system, repo, and proof surfaces |
-| Repository Skill | https://foundersignal-buildweek.vercel.app/documentation/repository/ | Use FounderSignal as a Codex workflow |
-| eve Agent | https://foundersignal-buildweek.vercel.app/eve/ | Durable agent directory proof |
-| Vault Handoff | https://foundersignal-buildweek.vercel.app/vault-handoff.html | Package corrected session for continuity |
-| Workspace Packet | https://foundersignal-buildweek.vercel.app/workspace.html | Copy-ready handoff for Codex, GPT, and vibe coders |
-| Changelog | https://foundersignal-buildweek.vercel.app/resources/changelog/ | Product update log |
-| Resource Status | https://foundersignal-buildweek.vercel.app/resources/status/ | Human-readable status page |
-| Community | https://foundersignal-buildweek.vercel.app/resources/community/ | Clone, test, correct, and reuse path |
-| Proof Scenarios | https://foundersignal-buildweek.vercel.app/resources/customer-stories/ | SaaS, local business, and agent workflow scenarios |
-| System Status | https://foundersignal-buildweek.vercel.app/api/system-status | Verified route/artifact/cron contract |
+The hosted build-week demo is temporarily offline. Every page in the table it used to link (`demo.html`, `brief.html`, `report.html`, `assets.html`, `builder.html`, `workspace.html`, `vault-handoff.html`, and the `products/`, `resources/` and `documentation/` folders) is in this repository and runs on any static host with the `api/` functions deployed to Vercel.
 
 ## What FounderSignal Does
 
@@ -168,7 +156,7 @@ No unsupported benchmark claims are made. The point is architecture: other engin
 
 Use this sequence to verify the full loop:
 
-1. Open https://foundersignal-buildweek.vercel.app/demo.html
+1. Open `demo.html` on your deployment
 2. Click **Start at Agent Console**.
 3. Select **Agent Mission**, **SaaS Mission**, or **Local Biz Mission**.
 4. Click **Run Workflow**.
@@ -205,7 +193,7 @@ Use this sequence to verify the full loop:
 Example:
 
 ```bash
-curl -X POST https://foundersignal-buildweek.vercel.app/api/compile-brief \
+curl -X POST https://<your-deployment>/api/compile-brief \
   -H "Content-Type: application/json" \
   -d '{"idea":"Multi-agent LinkedIn lead outreach system","score":82,"risks":["platform policy","deliverability","personalization quality"]}'
 ```
@@ -257,7 +245,7 @@ eve-agent/
 Live proof:
 
 ```bash
-curl https://foundersignal-buildweek.vercel.app/api/eve-manifest
+curl https://<your-deployment>/api/eve-manifest
 ```
 
 ## GitHub Proof Assets
